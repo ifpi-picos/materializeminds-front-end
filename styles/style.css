@@ -1,0 +1,214 @@
+.join {margin: auto;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.main {margin: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    
+}
+.text {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.title {
+    font-weight: 900;
+    font-size: 40px;
+    color: #ffc400;
+    font-family: 'Open Sans';
+}
+.slogan {font-weight: bold;
+    font-size: 20px;
+    color: black; 
+    font-family: 'Roboto';  
+}
+.logo {
+    width: 100%;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+}
+.logo img {
+    width: 30%;
+    height: 320px;
+}
+.btns {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    
+}
+.btn-acessar {
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #ffc400;
+    height: 40px;
+    width: 35%;
+    padding: 5px;
+    border-radius: 15px;
+    border: 1px solid #ffc400;
+}
+.btn-cadastrar {
+    cursor: pointer;
+    font-size: 18px;
+    background-color: #ffc400;
+    height: 40px;
+    width: 35%;
+    border-radius: 15px;
+    border: 1px solid #ffc400;
+}
+.sec {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffc400;
+}
+.lapis {
+    height: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+}
+@keyframes example {
+  from {top: 0px;}
+  to {top: 600px; }
+}
+.header {
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    background-color: #ffc400;
+
+}
+/*tela de inicio */
+.nav-bar {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.input-group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.main {
+    width: 100%;
+}
+.anuncio {
+    width: 80%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.anuncio img {
+    width: 50%;
+    height: 300px;
+}
+/* tela de cadastro*/
+.body {
+    width: 100%;
+   /* background-color: #DCDCDC; */
+   background-color: #ffc400;
+   
+}
+.container {
+    margin: 50px auto;
+    width: 60%;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    box-shadow: 1px 1px 2px 3px rgba(0, 0, 0, 0.3);
+}
+.img {
+    width: 50%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.title-cadastro {
+    font-family: 'roboto';
+    font-size: 26px;
+}
+.form {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.50rem;
+}
+input {
+    height: 25px;
+    width: 100%;
+    border: 1px solid #ffc400;
+}
+.btns-cadastro {
+    width: 100%;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    justify-content:center;
+    align-items: center;
+    gap: 1rem;
+}
+.btn-enviar-cadastro {
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+.btn-limpar-cadastro {
+    cursor: pointer;
+    height: 30px;
+    width: 100%;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    box-shadow: 1px 1px 2px 1px rgba(0, 0, 0, 0.3);
+
+}
+.btn-cancelar-cadastro {
+    cursor: pointer;
+    width: 100%;
+    height: 30px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.3);
+
+}
