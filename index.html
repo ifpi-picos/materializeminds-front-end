@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="./styles/style.css">
     <link rel="stylesheet" href="https://cdn.materialdesignicons.com/5.4.55/css/materialdesignicons.min.css">
     <style>svg#freepik_stories-people-buying-school-supplies:not(.animated) .animable {opacity: 0;}svg#freepik_stories-people-buying-school-supplies.animated #freepik--background-complete--inject-5 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideDown;animation-delay: 0s;}svg#freepik_stories-people-buying-school-supplies.animated #freepik--Shadow--inject-5 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) zoomIn;animation-delay: 0s;}svg#freepik_stories-people-buying-school-supplies.animated #freepik--Floor--inject-5 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) lightSpeedLeft;animation-delay: 0s;}svg#freepik_stories-people-buying-school-supplies.animated #freepik--Sign--inject-5 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) lightSpeedLeft;animation-delay: 0s;}svg#freepik_stories-people-buying-school-supplies.animated #freepik--character-3--inject-5 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}svg#freepik_stories-people-buying-school-supplies.animated #freepik--character-2--inject-5 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) slideRight;animation-delay: 0s;}svg#freepik_stories-people-buying-school-supplies.animated #freepik--character-1--inject-5 {animation: 1s 1 forwards cubic-bezier(.36,-0.01,.5,1.38) fadeIn;animation-delay: 0s;}            @keyframes slideDown {                0% {                    opacity: 0;                    transform: translateY(-30px);                }                100% {                    opacity: 1;                    transform: translateY(0);                }            }                    @keyframes zoomIn {                0% {                    opacity: 0;                    transform: scale(0.5);                }                100% {                    opacity: 1;                    transform: scale(1);                }            }                    @keyframes lightSpeedLeft {              from {                transform: translate3d(-50%, 0, 0) skewX(20deg);                opacity: 0;              }              60% {                transform: skewX(-10deg);                opacity: 1;              }              80% {                transform: skewX(2deg);              }              to {                opacity: 1;                transform: translate3d(0, 0, 0);              }            }                    @keyframes fadeIn {                0% {                    opacity: 0;                }                100% {                    opacity: 1;                }            }                    @keyframes slideRight {                0% {                    opacity: 0;                    transform: translateX(30px);                }                100% {                    opacity: 1;                    transform: translateX(0);                }            }        </style>
     <a href="https://storyset.com/people"></a>
@@ -25,15 +25,16 @@
                 <p class="slogan">A escolha certa dos materiais escolar</p>
             </div>
             <div class="logo">
-                    <img src="../fotos/LogoSample_ByTailorBrands (1).jpg" alt="logo">
+                    <img src="./fotos/LogoSample_ByTailorBrands (1).jpg" alt="logo">
             </div>
             <div class="btns">
                     <button class="btn-acessar" onclick="irParaPgIncio()" href="inicio.html" id="btn-acessar">Acessar</button>
-                    <button class="btn-cadastrar">Cadastrar</button>
+                    <button class="btn-cadastrar" onclick="irParaPgCadastro()" href="cadastro.html" id=btn-cadastrar>Cadastrar</button>
             </div>
             
         </main>
-        <script src="../js/acessar.js"></script>
+        <script src="./js/acessar.js"></script>
+        <script src="./js/cadastro.js"></script>
     
 </body>
 </html>
