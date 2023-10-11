@@ -1,3 +1,3 @@
 function irParaPgCadastro() {
-    window.location.href = 'cadastro.html';
+    window.location.href = 'cadastroPessoa.html';
 }

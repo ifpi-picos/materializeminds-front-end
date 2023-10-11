@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Endereço</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <div class="cotainer">
+
+        <h1>Endereço da entrega</h1>
+        
+        <form  class="form" >
+            <label for="">CEP</label>
+            <input type="text" maxlength="9" id="cep">
+            <label for="">Estado</label>
+            <input type="text" id="uf">
+            <label for="">Cidade</label>
+            <input type="text" id="localidade">
+            <label for="">Bairro</label>
+            <input type="text"id="bairro" >
+            <label for="">Rua</label>
+            <input type="text" id="logradouro">
+            <label for="">Número</label>
+            <input type="number" id="numero">
+            <label for="">Ponto de referencia</label>
+            <input type="text">
+            <div class="btn-endereco">
+              <button class="btn-endereco-enviar" type="submit">Enviar</button>
+              <button class="btn-endereco-limpar" type="reset">LImpar</button>
+            </div>
+        </form>
+    </div>
+</body>
+<script src="./js/endereco.js"></script>
+</html>
