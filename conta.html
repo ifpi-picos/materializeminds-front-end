@@ -4,17 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
-    <main>
-        <div>
-            <img src="./fotos/person.svg" width="50" height="50">
-            <p>Nome</p>
-
+    <main class="container-conta">
+        <div class="border-conta">
+                <h2>Conta</h2>
+            <form action="" class="form-conta">
+               <input class="input-conta" type="text" placeholder="Nome">
+               <input class="input-conta"  type="text" placeholder="Email">
+               <input class="input-conta"  type="text" placeholder="Senha atual">
+               <input class="input-conta"  type="text" placeholder="Nova senha">
+               <input class="input-conta"  type="text" placeholder="Confirmar senha">
+               <div class="btns-conta">
+                   <button class="btn-historico-conta">Historico de compras</button>
+                   <button class="btn-salvar-conta">Salvar alterações</button>
+                   <button class="btn-excluir-conta">Excluicr usuario</button>
+               </div>
+            </form>
         </div>
-        <div>historico de compras</div>
-        <div>email</div>
-        <div>Número</div>
+       
     </main>
 </body>
 </html>

@@ -149,7 +149,7 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0px 0px 16px 0px rgba(242, 27, 13, 0.32);
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
 }
 .img {
     width: 50%;
@@ -232,7 +232,8 @@ input {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    box-shadow: 0px 0px 16px 0px rgba(242, 27, 13, 0.32);
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
+    
 }
 .form {
     font-size: 20px;
@@ -391,8 +392,9 @@ input {
 }
 .texto {
     width: 80%;
-
 }
+
+
 .cotainer-form {
     width: 90%;
     display: flex;
@@ -402,7 +404,7 @@ input {
 .border-form-papelaria-cadastro {
     width: 100%;
     height: 800px;
-    box-shadow: 0px 0px 16px 0px rgba(242, 27, 13, 0.32);
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -450,7 +452,6 @@ input {
 .btn-papelaria-salvar:hover {
     opacity: 0.6;
 }
-
 /* segunda etapa*/
 .item {
     margin: 50px auto;
@@ -462,32 +463,156 @@ input {
 .border-form-papelaria-item {
     width: 80%;
     height: 800px;
-    box-shadow: 0px 0px 16px 0px rgba(242, 27, 13, 0.32);
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 .form-papelaria-item {
     width: 80%;
     display: flex;
     flex-direction: column;
+}
+/*conta*/
+.container-conta {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     
+}
+.input-conta {
+    height: 40px;
+    border:1px solid #fff;
+    border-bottom:1px solid #ffc400;
+}
+.input-conta:hover {
+    border: 1px solid #ffc400;
+}
+.border-conta {
+    margin: 50px;
+    width: 80%;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.form-conta {
+    margin: 20px;
+    padding: 20px;
+    width: 80%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 24px;
+    
+}
+.btns-conta {
+    display: flex;
+    width: 100%;
+    gap: 2rem!important;
+}
+
+
+.btn-historico-conta {
+    width: 100%;
+    background-color: #ffc400;
+    border-radius: 8px;
+    border: 1px solid #ffc400;
+    height: 40px;
+    font-size: 20px;
+}
+.btn-salvar-conta {
+    width: 100%;
+    background-color: #03a9f4;
+    border-radius: 8px;
+    border: 1px solid #03a9f4;
+    height: 40px;
+    font-size: 20px;
+
+}
+.btn-excluir-conta {
+    width: 100%;
+    background-color: #ec407a;
+    border-radius: 8px;
+    border: 1px solid #ec407a;
+    height: 40px;
+    font-size: 20px;
+
 
 }
 /* tela das escolas*/
 .container-school {
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-direction: column;
+    align-items: center;
+   /* background-color: #fff;*/
 }
-.list {
-    height: 200px;
-   /* background-color: #fff;
-    box-shadow: #ec407a;*/
-}
-.list-school {
-    width: 80%;
+.list-card {
+    margin: 50px;
+    width: 70%;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+
+}
+
+.list-school {
+    margin: 50px!important;
+    width: 90%;
+    height: 400px;
+    display: flex;
+    flex-direction: column!important;
+    justify-content: center;
+    gap: 1rem;
+    font-size: 24px;
+     padding: 0;
+     margin: 0;
+
+}
+
+.btn-school  {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+.input-list {
+    width: 100%;
+    height: 40px;
+    border: 1px solid #ffc400;
+}
+.btn-acessar-lista {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    font-size: 20px;
+    border-radius: 8px;
+}
+.btn-cadastrar-school {
+    margin: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 35%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    font-size: 20px;
+    border-radius: 8px;
 }
