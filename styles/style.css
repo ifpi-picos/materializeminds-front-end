@@ -1,3 +1,12 @@
+/*tela de inicio */
+body {
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100vh;
+}
+
 .join {
     margin: auto;
     width: 100%;
@@ -7,8 +16,6 @@
 }
 
 .main {
-    margin: 50px;
-    width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -26,7 +33,7 @@
     font-weight: 900;
     font-size: 40px;
     color: #ffc400;
-    font-family: 'Open Sans';
+    font-family: 'Roboto';
 }
 .slogan {
     font-weight: bold;
@@ -42,7 +49,7 @@
 }
 .logo img {
     width: 30%;
-    height: 320px;
+    height: 300px;
 }
 .btns {
     width: 100%;
@@ -59,7 +66,7 @@
     height: 40px;
     width: 35%;
     padding: 5px;
-    border-radius: 15px;
+    border-radius: 8px;
     border: 1px solid #ffc400;
 }
 .btn-cadastrar {
@@ -68,7 +75,7 @@
     background-color: #ffc400;
     height: 40px;
     width: 35%;
-    border-radius: 15px;
+    border-radius: 8px;
     border: 1px solid #ffc400;
 }
 .sec {
@@ -86,17 +93,60 @@
     flex-direction: row;
     background-color: #ffc400;
 }
-/*tela de inicio */
-body {
-    margin: 0;
-}
+
 .nav-bar {
     width: 100%;
+    padding: 0 80px;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
+
+.nav-logo{
+    border-radius: 50px !important;
+}
+
+.nav-search {
+    display: flex;
+    align-items: center;
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    border-radius: 4px;
+    background-color: #fff;
+}
+
+.input-group > input {
+    border: none !important;
+    padding: 10px 20px;
+    width: 80%;
+    background-color: transparent !important;
+}
+
+.input-group > input:focus {
+    border: none !important;
+    outline: none !important;
+}
+
+.input-group > button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    border: none;
+
+}
+
+.nav-icons {
+    display: flex;
+    justify-content: right;
+    gap: 35px;
+}
+
 .list {
     display: flex;
     flex-direction: row;
@@ -106,15 +156,6 @@ body {
 }
 
 
-.input-group {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-}
-.main {
-    width: 100%;
-}
 .anuncio {
     margin: 100px;
     width: 80%;
@@ -133,6 +174,98 @@ body {
     height: 250px;
     display: flex;
     justify-content: space-between;
+}
+.border-produto {
+    width: 10%;
+    height: 150px;
+   /* border: 4px solid #ffc400;*/
+    border-radius: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
+
+}
+/*tela da cateoria lapis*/
+.product-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.product-item {
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
+    
+}
+.img-lapis {
+    width: 50%;
+}
+.img-lapis  img {
+    width: 100%;
+    height: 600px;
+}
+.description-lapis {
+    margin: 5px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    padding: 5px;
+}
+.product-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+.product-price {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.btns-de-categoria {
+    width: 100%;
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+}
+.btn-adicionar-ao-carrinho {
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    width: 35%;
+    height: 40px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+    
+}
+.btn-comprar-agora {
+    height: 40px;
+    width: 35%;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #03a9f4;
+    border:  1px solid #03a9f4;
+    font-size: 18px;
 }
 /* tela de cadastro*/
 .body {
@@ -168,12 +301,12 @@ body {
     flex-direction: column;
     gap: 0.50rem;
 }
-input {
+/* input {
     height: 35px;
     width: 100%;
     font-size: 16px;
     border: 1px solid #80d8ff;
-}
+} */
 .btns-cadastro {
     width: 100%;
     cursor: pointer;
@@ -222,12 +355,13 @@ input {
 }
 /* tela de endereço*/
 .cotainer {
-    margin: 50px auto;
+    margin: auto;
+    margin-top: 1rem;
     width: 80%;
     font-size: 24px;
     font-family: 'roboto';
     display: flex;
-    height: 850px;
+    height: 870px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -245,7 +379,7 @@ input {
     align-content: center;
     justify-items: center;
     justify-content: center;
-    gap: 1rem;
+    gap: 0.5rem;
 }
 .btn-endereco {
     width: 100%;
@@ -261,7 +395,7 @@ input {
     background-color: #03a9f4;
     font-size: 20px;
     border: 1px solid #03a9f4;
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -279,7 +413,7 @@ input {
     background-color: #ffc400;
     font-size: 20px;
     border: 1px solid #ffc400;
-    border-radius: 12px;
+    border-radius: 8px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -378,6 +512,7 @@ input {
     font-size: 24px;
     background-color: #ffc400;
     border: 1px solid #ffc400;
+    border-radius: 8px;
 }
 .btn-work:hover {
     opacity: 0.6;
@@ -472,6 +607,29 @@ input {
     width: 80%;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
+}
+.btn-voltar {
+    width: 100%;
+    background-color: #ffc400;
+    border-radius: 8px;
+    border: 1px solid #ffc400;
+    height: 40px;
+    font-size: 20px;
+}
+.btn-salvar-item {
+    cursor: pointer;
+    width: 100%;
+    height: 40px;
+    background-color: #03a9f4;
+    border:  1px solid #03a9f4;
+    font-size: 20px;
+    border-radius: 8px;
+}
+label{
+    font-size: 24px;
+    font-family: "Roboto";
+    
 }
 /*conta*/
 .container-conta {
@@ -615,4 +773,82 @@ input {
     border: 1px solid #ffc400;
     font-size: 20px;
     border-radius: 8px;
+}
+/* carrinho*/
+.principal {
+    margin: 50px auto;
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+}
+.btn-papelaria-voltar {
+    width: 100%;
+}
+.btn-voltar-carrinho {
+    width: 30%;
+    height: 40px;
+    font-size: 20px;
+    background-color: #fff;
+    border: 1px solid #fff;
+
+}
+.container-carrinho {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+.produto {
+    border:  1px solid #80d8ff;
+    width: 50%;
+    
+}
+.valor {
+    width: 45%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    border: 1px solid #03a9f4;
+}
+.input-carrinho {
+    width: 7%;
+    border: 1px solid #ffc400;
+}
+.btn-endereco-entrega {
+    width: 30%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.btn-pagamento-pix {
+    width: 30%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.btn-pagamento-cartao {
+    width: 30%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    border-radius: 8px;
+    font-size: 20px;
+}
+.btn-finalizar-compra {
+    width: 30%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    border-radius: 8px;
+    font-size: 20px;
 }
