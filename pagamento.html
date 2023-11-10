@@ -34,20 +34,55 @@
         </nav>
     </header>
     <main class="main">
-        <div class="produtos-selecionados">
-         <img src="" alt="produto">
-        </div>
-        <div> 
-            <h2>confirmar o endereço de entrega</h2>
-            <button>endereço de entrega</button>
-        </div>
-        <div class="forma-de-pagamento"> 
-            <h2>escolha a forma de pagamento</h2>
-            <button>pagamento no cartão de credito</button>
-            <button>pagamento com o pix</button>
-        </div>
+        <div class="card-border-pag">
+            <div class="produtos-selecionados">
+             <img src="" alt="produto">
+            </div>
+            <div class="card-pagamento"> 
+                <h2>confirmar o endereço de entrega</h2>
+                <button class="btn-endereco-entrega">endereço de entrega</button>
+                <div class="forma-de-pagamento"> 
+                    <h2>escolha a forma de pagamento</h2>
+                    <button class="pagamento-cartao" id="open-modal-cartao" onclick="abrirModalCartao()">pagamento no cartão de credito</button>
+                    <div> 
+                        <div class="card-do-modal-cartao" id="myModal">
+                            <h2>dados do cartao</h2>
+                            <form action="" class="form-pagamento">
+                                <label for="">bandeira do cartao</label>
+                                <input class="input-conta" type="text">
+                                <label for="">Numero do cartao</label>
+                                <input class="input-conta" type="number">
+                                <label for="">Nome do titular</label>
+                                <input class="input-conta" type="text">
+                                <label for="">CVC</label>
+                                <input class="input-conta" type="text">
+                                <label for="">Nmero de parcelas </label>
+                                <input class="input-conta" type="text">
+                                <div>
+    
+                                    <button class="btn-finalizar-compra">finalizar comprar</button>
 
+                                    <img class="close" onclick="close()" src="./fotos/close_FILL0_wght400_GRAD0_opsz24.svg" width="32" height="32" alt="">
+                                </div>
+                                <div class="card-sucesso" >
+                                    <p>comprar finalizado com sucesso</p>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <button id="modal-pix" class="pagamento-pix" onclick="modalPix()">pagamento com o pix</button>
+                    <div class="modal-pix-pagamento" id="pix-pagamento">
+                        <h3>aprovação em minutos</h3>
+                        <p>codigo pix</p>
+                        <input type="number" title="dsdhjjskks">
+                        <button class="btn-finalizar-compra">finalizar comprar </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
     </main>
     
 </body>
+ <script src="./js/modal.js"></script>
 </html>

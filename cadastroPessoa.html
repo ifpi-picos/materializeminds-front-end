@@ -11,16 +11,16 @@
         <div class="img">
             <img src="./fotos/LogoSample_ByTailorBrands (1).jpg" alt="logo">
         </div>
-       <form class="form">
+       <form class="form" id="createUserForm">
           <p class="title-cadastro"> Criar conta </p>
           <label for="">Nome completo</label>
-          <input class="input-conta" type="text" placeholder="Nome">
+          <input class="input-conta" type="text" id="nameUser" required>
           <label for="">Email</label>
-          <input class="input-conta" type="text" placeholder="email">
-          <label for="">Celular</label>
-          <input class="input-conta" type="number" placeholder="Numero de Celular">
+          <input class="input-conta" type="text" id="emailUser" required>
           <label for="">Senha</label>
-          <input class="input-conta" type="number" placeholder="senha">
+          <input class="input-conta" type="password" id="passwordUser" required>
+          <label for="">Celular</label>
+          <input class="input-conta" type="number" id="numberUser" required>
           <div class="btns-cadastro">
               <button class="btn-enviar-cadastro" type="submit">Enviar</button>
               <button class="btn-limpar-cadastro"  type="reset">Limpar</button>
@@ -28,5 +28,6 @@
           </div>
        </form>
     </div>
+    <script src="./js/createUser.js"></script>
 </body>
 </html>

@@ -852,3 +852,91 @@ label{
     border-radius: 8px;
     font-size: 20px;
 }
+/* tela de pagamento */
+.produtos-selecionados {
+    width: 100%;
+    height: 600px;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
+    display: flex;
+    flex-direction: column;
+
+}
+.card-pagamento {
+   width: 100%;
+  
+   box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
+   display: flex;
+   flex-direction: column;
+   justify-content: space-between;
+   align-items: center;
+
+}
+.pagamento-cartao {
+    width: 100%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    border-radius: 8px;
+    font-size: 20px;
+
+}
+.form-pagamento {
+    width: 60% ;
+    display: flex;
+    gap: 1rem;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    background-color: #fff;
+    margin: 150px ;
+    padding: 20px;
+    border: 1px solid #888;
+  
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+
+}
+.card-do-modal-cartao {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+}
+.card-sucesso {
+    height: 150px;
+    width: 40%;
+    background-color: #ffc400;
+}
+.forma-de-pagamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+.close {
+    float: right;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: red;
+}
+.pagamento-pix {
+    width: 100%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    border-radius: 8px;
+    font-size: 20px;
+
+}
+.card-border-pag {
+    display: flex;
+    width: 95%;
+    gap: 2rem;
+}
