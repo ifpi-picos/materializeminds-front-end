@@ -1,35 +1,48 @@
 document.getElementById('createUserForm').addEventListener('submit', async (event) => {
     event.preventDefault();
 
-    const name = document.getElementById('nameUser').value;
+    const nome = document.getElementById('nameUser').value;
     const email =  document.getElementById('emailUser').value;
-    const password = document.getElementById('passwordUser').value;
-    const celular = document.getElementById('numberUser').value;
+    const senha = document.getElementById('passwordUser').value;
+    const numero = document.getElementById('numberUser').value;
+
+    const telefone = String(numero)
 
     const user = {
+        nome,
         email,
-        name,
-        password,
-        celular
+        senha,
+        telefone
     };
 
-    try {
-        const response = await fetch('https://api-materialize.onrender.com/user', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json'
-            }, 
-            body: JSON.stringify(user)
-         });
-         if (response.status === 200) {
-            window.location.href = 'inicio.html';
-            alert("usuario criado com sucesso");
-         } if (response.status === 400) {
-            alert("Error na criação do usuario");
-         }
-    }  catch (error) {
-        console.error(error);
-    }
+    const url = 'http://localhost:3333/user';
+
+    // Fazendo a requisição com o método fetch
+    fetch(url, {
+        method: 'POST', // Mude para POST
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(user),
+      })
+
+      .then(response => {
+        // Verifica se a resposta foi bem-sucedida (status 2xx)
+        if (!response.ok) {
+          throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
+        }
+        // Converte a resposta para JSON e retorna
+        return response.json();
+      })
+      .then(data => {
+        // Manipula os dados recebidos
+        console.log('Dados recebidos:', data);
+      })
+      .catch(error => {
+        // Manipula erros
+        console.error('Erro na requisição:', error);
+      });
+
 });
         
 
