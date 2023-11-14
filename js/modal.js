@@ -1,26 +1,30 @@
-var img = document.getElementsByClassName("close")[0];
-var modal = document.getElementById("myModal");
-var btn = document.getElementById("openModal");
+const openPixModal = document.getElementById('openPixModal');
+const pixModal = document.getElementById('pixModal');
+const closePixModal = document.getElementById('closePixModal');
 
+const openCardModal = document.getElementById('openCartaoModal');
+const cardModal = document.getElementById('cartaoModal');
+const closeCardModal = document.getElementById('closeCartaoModal');
 
+const successModal = document.getElementById('successModal');
 
-function abrirModalCartao() {
-    modal.style.display = "block";
+openPixModal.addEventListener('click', () => {
+  pixModal.style.display = 'block';
+});
 
-}
-function close() {
-    modal.style.display = "none";
-}
+closePixModal.addEventListener('click', () => {
+  pixModal.style.display = 'none';
+});
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+openCardModal.addEventListener('click', () => {
+  cardModal.style.display = 'block';
+});
 
-const modalpix = document.getElementById("modal-pix");
-const pagamentopix = document.getElementById("pix-pagamento");
+closeCardModal.addEventListener('click', () => {
+  cardModal.style.display = 'none';
+});
 
-function modalPix() {
-    pagamentopix.style.display = "block";
-}
+// Fechar o modal de sucesso após 3 segundos (pode ajustar o tempo)
+setTimeout(() => {
+  successModal.style.display = 'none';
+}, 3000);

@@ -853,6 +853,11 @@ label{
     font-size: 20px;
 }
 /* tela de pagamento */
+.card-border-pag {
+    display: flex;
+    width: 95%;
+    gap: 2rem;
+}
 .produtos-selecionados {
     width: 100%;
     height: 600px;
@@ -863,7 +868,6 @@ label{
 }
 .card-pagamento {
    width: 100%;
-  
    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
    display: flex;
    flex-direction: column;
@@ -871,7 +875,22 @@ label{
    align-items: center;
 
 }
+.forma-de-pagamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
 .pagamento-cartao {
+    width: 100%;
+    height: 40px;
+    background-color: #ffc400;
+    border: 1px solid #ffc400;
+    border-radius: 8px;
+    font-size: 20px;
+
+}
+.pagamento-pix {
     width: 100%;
     height: 40px;
     background-color: #ffc400;
@@ -891,52 +910,38 @@ label{
     margin: 150px ;
     padding: 20px;
     border: 1px solid #888;
-  
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
 
 }
-.card-do-modal-cartao {
+
+.modal {
     display: none;
     justify-content: center;
     align-items: center;
-    margin: auto;
     position: fixed;
-    z-index: 1;
-    left: 0;
     top: 0;
+    left: 0;
     width: 100%;
-    background-color: rgba(0,0,0,0.4);
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
 }
-.card-sucesso {
-    height: 150px;
-    width: 40%;
-    background-color: #ffc400;
+  
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #333;
+    width: 50%;
+    text-align: center;
 }
-.forma-de-pagamento {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 1rem;
-}
+  
 .close {
+    color: #aaa;
     float: right;
+    font-size: 20px;
     cursor: pointer;
 }
-
+  
 .close:hover {
-    color: red;
-}
-.pagamento-pix {
-    width: 100%;
-    height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
-    border-radius: 8px;
-    font-size: 20px;
-
-}
-.card-border-pag {
-    display: flex;
-    width: 95%;
-    gap: 2rem;
+    color: black;
 }

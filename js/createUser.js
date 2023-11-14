@@ -4,9 +4,9 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
     const nome = document.getElementById('nameUser').value;
     const email =  document.getElementById('emailUser').value;
     const senha = document.getElementById('passwordUser').value;
-    const numero = document.getElementById('numberUser').value;
+    const telefone = document.getElementById('numberUser').value;
 
-    const telefone = String(numero)
+    
 
     const user = {
         nome,
@@ -16,9 +16,8 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
     };
 
     // Fazendo a requisição com o método fetch
-    async function fazerRequisicao(user) {
-      
-      const url = 'https://api-materialize.onrender.com';
+    async function fazerRequisicao() {
+      const url = ' https://api-materialize.onrender.com/user';
 
       try {
         const response = await fetch(url, {
@@ -30,50 +29,30 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
         });
         
         if(response.status === 201){
+          window.location.href = 'inicio.html';
+          alert("usuario criado com sucesso");
           const data = await response.json();
           console.log('Dados do servidor:', data);
 
         } else{
             const error = await response.json();
+            alert("usuario existe ");
             console.error('Erro no servidor:', error);
             throw new Error(error.statusText || 'Erro desconhecido');
         }
 
       } catch (error) {
-        console.error('Erro na requisição:', error.message);
+
+        if (error.statusText && error.statusText.includes('Unique constraint failed on the fields: (`email`)')) {
+          console.error('Erro na requisição: E-mail já está em uso.');
+        } else {
+          console.error('Erro na requisição:', error.message);
+          
+         
+      }
       }
     }
-  
     fazerRequisicao(user)
-
-
-
-
-
-
-  // fetch(url, {
-  //   method: 'POST',
-  //   headers: {
-  //     'Content-Type': 'application/json',
-  //   },
-  //   body: JSON.stringify(user),
-  // })
-    // .then(response => {
-    //   if (!response.ok) {
-    //     return response.json().then(error => {
-    //       console.error('Erro no servidor:', error);
-    //       throw new Error(error.statusText || 'Erro desconhecido');
-    //     });
-    //   }
-    //   return response.json();
-    // })
-    // .then(data => {
-    //   console.log('Dados do servidor:', data);
-    // })
-    // .catch(error => {
-    //   console.error('Erro na requisição:', error.message);
-    // });
-
 });
         
 
