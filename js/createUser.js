@@ -15,33 +15,64 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
         telefone
     };
 
-    const url = 'http://localhost:3333/user';
-
     // Fazendo a requisição com o método fetch
-    fetch(url, {
-        method: 'POST', // Mude para POST
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(user),
-      })
+    async function fazerRequisicao(user) {
+      
+      const url = 'https://api-materialize.onrender.com';
 
-      .then(response => {
-        // Verifica se a resposta foi bem-sucedida (status 2xx)
-        if (!response.ok) {
-          throw new Error(`Erro na requisição: ${response.status} - ${response.statusText}`);
+      try {
+        const response = await fetch(url, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(user),
+        });
+        
+        if(response.status === 201){
+          const data = await response.json();
+          console.log('Dados do servidor:', data);
+
+        } else{
+            const error = await response.json();
+            console.error('Erro no servidor:', error);
+            throw new Error(error.statusText || 'Erro desconhecido');
         }
-        // Converte a resposta para JSON e retorna
-        return response.json();
-      })
-      .then(data => {
-        // Manipula os dados recebidos
-        console.log('Dados recebidos:', data);
-      })
-      .catch(error => {
-        // Manipula erros
-        console.error('Erro na requisição:', error);
-      });
+
+      } catch (error) {
+        console.error('Erro na requisição:', error.message);
+      }
+    }
+  
+    fazerRequisicao(user)
+
+
+
+
+
+
+  // fetch(url, {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify(user),
+  // })
+    // .then(response => {
+    //   if (!response.ok) {
+    //     return response.json().then(error => {
+    //       console.error('Erro no servidor:', error);
+    //       throw new Error(error.statusText || 'Erro desconhecido');
+    //     });
+    //   }
+    //   return response.json();
+    // })
+    // .then(data => {
+    //   console.log('Dados do servidor:', data);
+    // })
+    // .catch(error => {
+    //   console.error('Erro na requisição:', error.message);
+    // });
 
 });
         
