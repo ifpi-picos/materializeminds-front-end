@@ -45,21 +45,23 @@
 
                     <form action="" class="form-papelaria-cadastro"  onsubmit="enviarRequisicao(event)">
                         <label for="">Nome da papelaria</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*">
                         <label for="">Contato</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*">
                         <label for="">Email</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*">
                         <label for="">Senha</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*">
+                        <label for="">Cep</label>
+                        <input class="input-conta" type="text" placeholder="*"  maxlength="9" id="cep">
                         <label for="">Estado onde reside a papelaria</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*" id="uf">
                         <label for="">Cidade</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*" id="localidade">
                         <label for="">Bairro</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*"  id="bairro">
                         <label for="">Rua</label>
-                        <input class="input-conta" type="text">
+                        <input class="input-conta" type="text" placeholder="*" id="logradouro">
                        
                         <div class="btns-papelaria">
                             <button class="btn-papelaria-voltar" type="submit" onclick="voltarTrablhoconosco()">Voltar</button>
@@ -71,6 +73,7 @@
          </div>
      </main>
 </body>
+<script src="./js/endereco.js"></script>
 <script type="module" src="./js/createFornecedor.js"></script>
 
 </html>
