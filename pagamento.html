@@ -40,7 +40,7 @@
             </div>
             <div class="card-pagamento"> 
                 <h2>confirmar o endereço de entrega</h2>
-                <button class="btn-endereco-entrega">endereço de entrega</button>
+                <button class="btn-endereco-entrega" onclick="confirmarEntrega()">endereço de entrega</button>
                 <div class="forma-de-pagamento"> 
                     <h2>escolha a forma de pagamento</h2>
                     <button class="pagamento-cartao" id="openCartaoModal">pagamento no cartão de credito</button>
@@ -60,8 +60,8 @@
                                 <input class="input-conta" type="text">
                                 <label for="">Nmero de parcelas </label>
                                 <input class="input-conta" type="text">
-                                <div>
-                                    <button class="btn-finalizar-compra">finalizar comprar</button>
+                                <div class="menu">
+                                    <button class="btn-finalizar-compra" id="openSucesso" >finalizar comprar</button>
                                     <img class="close" id="closeCartaoModal"  src="./fotos/close_FILL0_wght400_GRAD0_opsz24.svg" width="32" height="32" alt="">
                                 </div>
                             </form>
@@ -73,14 +73,18 @@
                             <h3>aprovação em minutos</h3>
                             <p>codigo pix</p>
                             <input type="number" title="dsdhjjskks">
-                            <img src="fotos/close_FILL0_wght400_GRAD0_opsz24.svg"  id="closePixModal"  alt="">
-                            <button class="btn-finalizar-compra">finalizar comprar </button>
+                            <img src="fotos/close_FILL0_wght400_GRAD0_opsz24.svg" class="close" id="closePixModal"  alt="">
+                            <button class="btn-finalizar-compra" id="openSucesso">finalizar comprar </button>
                         </div>
                     </div>
                     <!--modal sucesso-->
                     <div class="modal"  id="successModal">
                         <div class="modal-content">
-                            <p>comprar finalizado com sucesso</p>
+                            <div class="sucesso">
+                                <p>comprar finalizado com sucesso</p>
+                                <img class="close" id="closeSucesso"  src="./fotos/close_FILL0_wght400_GRAD0_opsz24.svg" width="32" height="32" alt="">
+
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,7 +92,7 @@
         </div>
         
     </main>
-    
+    <script src="./js/entregaConfirma.js"></script>
     <script src="./js/modal.js"></script>
 </body>
 

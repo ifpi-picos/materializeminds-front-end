@@ -1,5 +1,5 @@
 function voltarParaCadrastro() {
-   window.href= 'work.html'
+   window.href= 'convecer.html'
 }
 function cadastraritem() {
    window.location.href = 'item.html';

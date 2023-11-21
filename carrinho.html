@@ -40,9 +40,15 @@
             <button class="btn-voltar-carrinho" type="submit">- Voltar</button>
         </div>
         <div class="container-carrinho">
-            <h1>carrinho vazio</h1>
+            <h1>carrinho de compras</h1>
+            <ul class="carrinhoLista" id="carrinhoLista">
+
+            </ul>
+            <p>Total: R$ <span id="totalCarrinho">0.00</span></p>
+            <button onclick="IrparaPaginaPagsamento()">pagamaento</button>
         </div>
         <div class="produtros">
+
             <div class="border-produto">
                 <a href="lapis.html" title="lapis/caneta"> <img src="./fotos/pen.svg" width="80" height="80" ></a>
             </div>
@@ -59,5 +65,6 @@
                 <a href="" title="arte/tint/pinceis"><img src="./fotos/pallete.svg" width="80" height="80"></a>
             </div>
     </main>
+    <script src="./js/produto.js"></script>
 </body>
 </html>

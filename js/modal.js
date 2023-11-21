@@ -7,6 +7,9 @@ const cardModal = document.getElementById('cartaoModal');
 const closeCardModal = document.getElementById('closeCartaoModal');
 
 const successModal = document.getElementById('successModal');
+const opensucesso = document.getElementById('openSucesso');
+const closeSucesso = document.getElementById('closeSucesso');
+
 
 openPixModal.addEventListener('click', () => {
   pixModal.style.display = 'block';
@@ -23,6 +26,14 @@ openCardModal.addEventListener('click', () => {
 closeCardModal.addEventListener('click', () => {
   cardModal.style.display = 'none';
 });
+opensucesso.addEventListener('click' , () => {
+  successModal.style.display = 'block';
+});
+
+closeSucesso.addEventListener('click', () => {
+  successModal.style.display = 'none';
+});
+
 
 // Fechar o modal de sucesso após 3 segundos (pode ajustar o tempo)
 setTimeout(() => {

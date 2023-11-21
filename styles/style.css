@@ -167,14 +167,15 @@ body {
 .anuncio {
     margin: 100px;
     width: 80%;
-    height: 200px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .anuncio img {
-    width: 20%;
-    height: 200px;
+    width: 40%;
+    height: 300px;
+    
 }
 .produtros {
     margin: 100px;
@@ -428,7 +429,31 @@ body {
 
 }
 /* tela trabalhe conosco convencendo o cliente*/
-
+.imagem-fundo {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+.imagem-fundo::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("https://img.freepik.com/vetores-gratis/cenografia-de-elementos-de-papelaria-empresarial-moderno_1017-30618.jpg?size=626&ext=jpg"); /* Substitua pelo caminho real da sua imagem */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    opacity: 0.4; /* Valor entre 0 (totalmente transparente) e 1 (opaco) */
+    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
+}
 .work-papelaria {
     margin: 50px auto;
     width: 100%;
@@ -438,6 +463,7 @@ body {
     justify-content: center;
     align-items: center;
 }
+
 .work-papelaria p {
     font-size: 24px;
     font-family: "Roboto";
@@ -564,6 +590,13 @@ body {
     justify-items: center;
     gap: 0.80rem;
     font-size: 20px;
+}
+.form-papelaria-cadastro  ::placeholder {
+    font-size: 32px;
+    color: #ffc400;
+    display: flex;
+    
+    align-items: flex-end;
 }
 .btns-papelaria {
     width: 100%;
@@ -879,7 +912,7 @@ label{
    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
    display: flex;
    flex-direction: column;
-   justify-content: space-between;
+   justify-content: space-evenly;
    align-items: center;
 
 }
@@ -917,11 +950,14 @@ label{
     background-color: #fff;
     margin: 150px ;
     padding: 20px;
-    border: 1px solid #888;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
+   
 
 }
-
+.menu {
+    display: flex;
+    flex-direction: column;
+}
 .modal {
     display: none;
     justify-content: center;
@@ -936,20 +972,30 @@ label{
   
 .modal-content {
     background-color: #fff;
-    margin: 15% auto;
+    margin: 10px auto;
     padding: 20px;
     border: 1px solid #333;
     width: 50%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
 }
   
 .close {
-    color: #aaa;
+    color: #ec407a;
     float: right;
     font-size: 20px;
     cursor: pointer;
+    background-color: #ec407a;
 }
   
 .close:hover {
-    color: black;
+    color: red;
+    background-color: #ec407a;
+}
+.sucesso {
+    background-color: #ffc400;
 }

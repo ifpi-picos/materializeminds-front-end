@@ -35,8 +35,9 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
         console.log('Dados do servidor:', data);
 
       } else {
+        alert("usuario existente ");
+        window.location.href = 'conta.html';
         const error = await response.json();
-        alert("usuario existe ");
         console.error('Erro no servidor:', error);
         throw new Error(error.statusText || 'Erro desconhecido');
       }
