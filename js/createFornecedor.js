@@ -1,4 +1,6 @@
-export default async function enviarRequisicao() {
+async function enviarRequisicao(event) {
+    event.preventDefault();
+    
     const url = 'https://api-materialize.onrender.com/suppliers'; 
     const dadosFornecedor = {
         nomeDaEmpresa: 'Nome da Empresa',
@@ -20,8 +22,7 @@ export default async function enviarRequisicao() {
             },
             body: JSON.stringify(dadosFornecedor)
         });
-
-        if( response.status === 201) {
+         if( response.status === 200) {
             alert("Papelaria cadastrada com sucesso!");
             console.log('Fornecedor criado com sucesso!');
             window.location.href = 'item.html';
