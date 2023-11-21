@@ -1,3 +1,3 @@
 function irParaPgIncio () {
-    window.location.href = 'inicio.html';
+    window.location.href = 'index.html';
 }

@@ -7,6 +7,34 @@
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body>
+    <header class="header">
+        <nav class="nav-bar">
+           <a href="/">
+            <img class="nav-logo" src="./fotos/LogoSample_ByTailorBrands (1).jpg" width="60" height="60" />
+           </a>
+
+            <div class="nav-search">
+                <form class="">
+                    <div class="input-group">
+                        <input type="text" placeholder="Busque seu material..."/>
+                        <button>
+                            <svg xmlns="http://www.w3.org/2000/svg" height="1.5em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                        </button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="nav-icons">
+                <a href="escolas.html"><img src="./fotos/escola.svg" width="32" height="32" title="escolas cadastrada"/></a>
+                <a href="conta.html"><img src="./fotos/person.svg" width="32" height="32" title="perfil"/> </a>
+                <a href="carrinho.html"><img src="./fotos/carinho.svg" width="32" height="32"/></a>
+                <a href="endereço.html">
+                    <img src="./fotos/location.svg" width="32" height="32" />
+                </a>
+                <a href="convecer.html"><img src="./fotos/work.svg" width="32" height="32" title="trabalhe conosco"></a>
+            </div>
+        </nav>
+    </header>
      <main class="mai"> 
         <div class="texto">
             
@@ -21,9 +49,9 @@
                         <label for="">Contato</label>
                         <input class="input-conta" type="text">
                         <label for="">Email</label>
-                        <input type="text">
+                        <input class="input-conta" type="text">
                         <label for="">Senha</label>
-                        <input type="text">
+                        <input class="input-conta" type="text">
                         <label for="">Estado onde reside a papelaria</label>
                         <input class="input-conta" type="text">
                         <label for="">Cidade</label>
@@ -32,8 +60,7 @@
                         <input class="input-conta" type="text">
                         <label for="">Rua</label>
                         <input class="input-conta" type="text">
-                        <label for="">Número</label>
-                        <input class="input-conta" type="text" placeholder="*">
+                       
                         <div class="btns-papelaria">
                             <button class="btn-papelaria-voltar" type="submit" onclick="voltarTrablhoconosco()">Voltar</button>
                             <button type="submit" class="btn-papelaria-salvar" onclick="enviarRequisicao()">Salvar</button>
