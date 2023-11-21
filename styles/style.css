@@ -1,4 +1,14 @@
+:root{
+    --cor-principal: #ffc400;
+    --cor-secundaria: #03a9f4;
+    --cor-terceirizada: #ec407a;
+
+    --fonte-titulo : 1.3rem;
+}
+
 /*tela de inicio */
+
+
 body {
     margin: 0 auto;
     padding: 0;
@@ -22,6 +32,7 @@ body {
     justify-content: center;
     align-items: center;
     padding: 16px;  
+    font-size: 1.5rem;
 }
 .main {
     display: flex;
@@ -39,25 +50,23 @@ body {
 }
 .title {
     font-weight: 900;
-    font-size: 40px;
-    color: #ffc400;
+    font-size: 2rem;
+    color: var(--cor-principal);
     font-family: 'Roboto';
 }
 .slogan {
     font-weight: bold;
-    font-size: 20px;
+    /*font-size: 20px;*/
     color: black; 
     font-family: 'Roboto';  
 }
 .logo {
     width: 100%;
-    height: 350px;
     display: flex;
     justify-content: center;
 }
 .logo img {
-    width: 30%;
-    height: 300px;
+    max-width: 100%;
 }
 .btns {
     width: 100%;
@@ -67,31 +76,31 @@ body {
     align-items: center;
     gap: 10px;
 }
-.btn-acessar {
+
+.btns button{
+    font-size: 1.2rem;
     cursor: pointer;
-    font-size: 18px;
-    background-color: #ffc400;
     height: 40px;
     width: 35%;
     padding: 5px;
     border-radius: 8px;
-    border: 1px solid #ffc400;
+}
+
+.btn-acessar {
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
 }
 .btn-cadastrar {
-    cursor: pointer;
-    font-size: 18px;
-    background-color: #ffc400;
-    height: 40px;
-    width: 35%;
-    border-radius: 8px;
-    border: 1px solid #ffc400;
+    background-color: #fff;
+    border: 1px solid var(--cor-principal);;
+    color: #000
 }
 .sec {
     width: 100%;
     height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #ffc400;
+    background-color: var(--cor-principal);
 }
 
 .header {
@@ -99,7 +108,7 @@ body {
     height: 70px;
     display: flex;
     flex-direction: row;
-    background-color: #ffc400;
+    background-color: var(--cor-principal);
 }
 
 .nav-bar {
@@ -163,7 +172,6 @@ body {
     align-items: center;
 }
 
-
 .anuncio {
     margin: 100px;
     width: 80%;
@@ -187,7 +195,7 @@ body {
 .border-produto {
     width: 10%;
     height: 150px;
-   /* border: 4px solid #ffc400;*/
+   /* border: 4px solid var(--cor-principal);*/
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -209,7 +217,6 @@ body {
     flex-direction: row;
     justify-content: center;
     box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973); 
-    
 }
 .img-lapis {
     width: 50%;
@@ -251,8 +258,8 @@ body {
     gap: 1rem;
 }
 .btn-adicionar-ao-carrinho {
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     width: 35%;
     height: 40px;
     border-radius: 8px;
@@ -260,7 +267,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    font-size: 18px;
+    /* font-size: 18px; */
 
     
 }
@@ -272,9 +279,9 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #03a9f4;
-    border:  1px solid #03a9f4;
-    font-size: 18px;
+    background-color: var(--cor-secundaria);
+    border:  1px solid var(--cor-secundaria);
+    /* font-size: 18px; */
 }
 /* tela de cadastro*/
 .body {
@@ -300,10 +307,7 @@ body {
     justify-content: center;
     align-items: center;
 }
-.title-cadastro {
-    font-family: 'roboto';
-    font-size: 26px;
-}
+
 .form {
     width: 80%;
     display: flex;
@@ -326,38 +330,37 @@ body {
     gap: 1rem;
 }
 .btn-enviar-cadastro {
-    font-size: 18px;
+    /* font-size: 18px; */
     height: 40px;
     border-radius: 15px;
     cursor: pointer;
     width: 100%;
-    font-size: 16px;
-    background-color: #03a9f4;
-    border: 1px solid #03a9f4;
+    background-color: var(--cor-secundaria);
+    border: 1px solid var(--cor-secundaria);
 }
 .btn-enviar-cadastro:hover {
     opacity: 0.6;
 }
 .btn-limpar-cadastro {
-    font-size: 18px;
+    /* font-size: 18px; */
     height: 40px;
     border-radius: 15px;
     cursor: pointer;
     width: 100%;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
 }
 .btn-limpar-cadastro:hover {
     opacity: 0.6;
 }
 .btn-cancelar-cadastro {
-    font-size: 18px;
+    /* font-size: 18px; */
     height: 40px;
     border-radius: 15px;
     cursor: pointer;
     width: 100%;
-    border: 1px solid #ec407a;
-    background-color: #ec407a;
+    border: 1px solid var(--cor-terceirizada);
+    background-color: var(--cor-terceirizada);
 }
 .btn-cancelar-cadastro:hover {
     opacity: 0.6;
@@ -367,7 +370,7 @@ body {
     margin: auto;
     margin-top: 1rem;
     width: 80%;
-    font-size: 24px;
+    font-size: 1.2rem;
     font-family: 'roboto';
     display: flex;
     height: 870px;
@@ -379,7 +382,7 @@ body {
     
 }
 .form {
-    font-size: 20px;
+    /* font-size: 20px; */
     display: flex;
     flex-direction: column;
     width: 80%;
@@ -401,9 +404,9 @@ body {
     cursor: pointer;
     width: 50%;
     height: 40px;
-    background-color: #03a9f4;
-    font-size: 20px;
-    border: 1px solid #03a9f4;
+    background-color: var(--cor-secundaria);
+    /* font-size: 20px; */
+    border: 1px solid var(--cor-secundaria);
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -419,9 +422,9 @@ body {
     cursor: pointer;
     width: 50%;
     height: 40px;
-    background-color: #ffc400;
-    font-size: 20px;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    /* font-size: 20px; */
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
     display: flex;
     justify-content: center;
@@ -429,7 +432,7 @@ body {
 
 }
 /* tela trabalhe conosco convencendo o cliente*/
-.imagem-fundo {
+/* .imagem-fundo {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
@@ -448,12 +451,12 @@ body {
     width: 100%;
     height: 100%;
     background-image: url("https://img.freepik.com/vetores-gratis/cenografia-de-elementos-de-papelaria-empresarial-moderno_1017-30618.jpg?size=626&ext=jpg"); /* Substitua pelo caminho real da sua imagem */
-    background-size: cover;
+    /* background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.4; /* Valor entre 0 (totalmente transparente) e 1 (opaco) */
-    z-index: -1; /* Coloca o pseudo-elemento atrás do conteúdo */
-}
+    opacity: 0.4;  Valor entre 0 (totalmente transparente) e 1 (opaco) 
+    z-index: -1;  Coloca o pseudo-elemento atrás do conteúdo 
+}  */
 .work-papelaria {
     margin: 50px auto;
     width: 100%;
@@ -465,7 +468,7 @@ body {
 }
 
 .work-papelaria p {
-    font-size: 24px;
+    font-size: 1.2rem;
     font-family: "Roboto";
 }
 .work-title {
@@ -500,7 +503,6 @@ body {
     display: flex;
     align-items: center;
     justify-content:center;
-    font-size: 22px;
     font-family: "Roboto";
 }
 .porque {
@@ -514,7 +516,7 @@ body {
 }
 .porque p {
     width: 80%;
-    font-size: 20px;
+    /* font-size: 20px; */
     font-family: "Roboto";
 
 }
@@ -529,7 +531,7 @@ body {
 .funciona p {
     width: 70%;
     display: flex;
-    font-size: 22px;
+    /* font-size: 22px; */
     font-family: "Roboto";
 }
 .btn-trabalho {
@@ -543,9 +545,8 @@ body {
     cursor: pointer;
     height: 45px;
     width: 30%;
-    font-size: 24px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
 }
 .btn-work:hover {
@@ -589,14 +590,14 @@ body {
     align-content: center;
     justify-items: center;
     gap: 0.80rem;
-    font-size: 20px;
-}
-.form-papelaria-cadastro  ::placeholder {
-    font-size: 32px;
-    color: #ffc400;
-    display: flex;
     
+}
+
+.input-conta::placeholder {
+    color: var(--cor-principal);
+    display: flex;
     align-items: flex-end;
+
 }
 .btns-papelaria {
     width: 100%;
@@ -608,17 +609,17 @@ body {
     cursor: pointer;
     width: 100%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
-    font-size: 20px;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
+    
     border-radius: 15px;
 }
 .btn-papelaria-salvar {
     cursor: pointer;
     width: 100%;
     height: 40px;
-    background-color: #03a9f4;
-    border:  1px solid #03a9f4;
+    background-color: var(--cor-secundaria);
+    border:  1px solid var(--cor-secundaria);
     font-size: 20px;
     border-radius: 15px;
 }
@@ -652,25 +653,22 @@ body {
 }
 .btn-voltar {
     width: 100%;
-    background-color: #ffc400;
+    background-color: var(--cor-principal);
     border-radius: 8px;
-    border: 1px solid #ffc400;
+    border: 1px solid var(--cor-principal);
     height: 40px;
-    font-size: 20px;
+    
 }
 .btn-salvar-item {
     cursor: pointer;
     width: 100%;
     height: 40px;
-    background-color: #03a9f4;
-    border:  1px solid #03a9f4;
-    font-size: 20px;
+    background-color: var(--cor-secundaria);
+    border:  1px solid var(--cor-secundaria);
     border-radius: 8px;
 }
 label{
-    font-size: 24px;
     font-family: "Roboto";
-    
 }
 /*conta*/
 .container-conta {
@@ -684,10 +682,10 @@ label{
 .input-conta {
     height: 40px;
     border:1px solid #fff;
-    border-bottom:1px solid #ffc400;
+    border-bottom:1px solid var(--cor-principal);
 }
 .input-conta:hover {
-    border: 1px solid #ffc400;
+    border: 1px solid var(--cor-principal);
 }
 .border-conta {
     margin: 50px;
@@ -718,17 +716,17 @@ label{
 
 .btn-historico-conta {
     width: 100%;
-    background-color: #ffc400;
+    background-color: var(--cor-principal);
     border-radius: 8px;
-    border: 1px solid #ffc400;
+    border: 1px solid var(--cor-principal);
     height: 40px;
     font-size: 20px;
 }
 .btn-salvar-conta {
     width: 100%;
-    background-color: #03a9f4;
+    background-color: var(--cor-secundaria);
     border-radius: 8px;
-    border: 1px solid #03a9f4;
+    border: 1px solid var(--cor-secundaria);
     height: 40px;
     font-size: 20px;
 
@@ -787,7 +785,7 @@ label{
 .input-list {
     width: 100%;
     height: 40px;
-    border: 1px solid #ffc400;
+    border: 1px solid var(--cor-principal);
 }
 .btn-acessar-lista {
     margin: 5px;
@@ -797,8 +795,8 @@ label{
     align-items: center;
     width: 35%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     font-size: 20px;
     border-radius: 8px;
 }
@@ -810,8 +808,8 @@ label{
     align-items: center;
     width: 35%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     font-size: 20px;
     border-radius: 8px;
 }
@@ -855,41 +853,41 @@ label{
     align-items: center;
     flex-direction: column;
     gap: 1rem;
-    border: 1px solid #03a9f4;
+    border: 1px solid var(--cor-secundaria);
 }
 .input-carrinho {
     width: 7%;
-    border: 1px solid #ffc400;
+    border: 1px solid var(--cor-principal);
 }
 .btn-endereco-entrega {
     width: 30%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
     font-size: 20px;
 }
 .btn-pagamento-pix {
     width: 30%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
     font-size: 20px;
 }
 .btn-pagamento-cartao {
     width: 30%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
     font-size: 20px;
 }
 .btn-finalizar-compra {
     width: 30%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
     font-size: 20px;
 }
@@ -925,8 +923,8 @@ label{
 .pagamento-cartao {
     width: 100%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
     font-size: 20px;
 
@@ -934,8 +932,8 @@ label{
 .pagamento-pix {
     width: 100%;
     height: 40px;
-    background-color: #ffc400;
-    border: 1px solid #ffc400;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
     border-radius: 8px;
     font-size: 20px;
 
@@ -997,5 +995,5 @@ label{
     background-color: #ec407a;
 }
 .sucesso {
-    background-color: #ffc400;
+    background-color: var(--cor-principal);
 }
