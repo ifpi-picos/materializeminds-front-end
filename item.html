@@ -37,10 +37,8 @@
     </header>
     <main class="item">
         <div class="border-form-papelaria-item">
-            <form action="" class="form-papelaria-item">
+            <form action="" class="form-papelaria-item" id="form-papelaria-item" onsubmit="criarProduto(event)">
                 <h1>cadastrar itens </h1>
-                
-                 
                 <label>Foto</label>
                 <input class="input-conta" type="file" >
                 <label for="">Descrição do item</label>
@@ -58,10 +56,11 @@
                 <input class="input-conta" type="number">
                 <div class="btns-papelaria">
                     <button class="btn-voltar" onclick="voltarParaCadrastro()">Voltar</button>
-                    <button class="btn-salvar-item">Salvar</button>
+                    <button class="btn-salvar-item" onclick="criarProduto()">Salvar</button>
                 </div>
             </form>
         </div>
     </main>
+    <script src="./js/createProduto.js"></script>
 </body>
 </html>

@@ -1,3 +1,6 @@
+//document.getElementById('form-papelaria-item').addEventListener('submit', async (event) => {
+  //  event.preventDefault();
+  
 export async function criarProduto (dadosProduto) {
     const url = ' https://api-materialize.onrender.com/create-product';
 
@@ -29,4 +32,7 @@ export async function criarProduto (dadosProduto) {
     } catch (error) {
         console.error('Erro na requisição:', erro.message);
     }
-}
+
+ criarProduto();
+};
+
