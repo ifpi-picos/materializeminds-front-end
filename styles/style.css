@@ -997,3 +997,133 @@ label{
 .sucesso {
     background-color: var(--cor-principal);
 }
+
+.product-list{
+    width: 90%;
+	display: grid; 
+	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+	row-gap: 20px; 
+	column-gap: 20px; 
+	justify-content: center; 
+	align-items: center;  
+
+} 
+.card {
+	width: 100%;
+	margin: auto;
+	padding: auto;
+	border-radius: 15px;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--cor-branca);
+
+}
+.card:hover{
+	box-shadow: 0 0 7px rgba(242, 208, 13, 0.973);
+}
+  
+.card img {
+	display: block;
+	width: 90%;
+	height: auto;
+	object-fit: cover;
+}
+
+.card .name-produt{ 
+	font-family: var(--font-category);
+	font-weight: bold;
+	margin-top: 10px;
+	font-size: 1rem;
+}
+.price{
+	font-family: Arial, Helvetica, sans-serif;
+	margin-top: 15px;
+
+}
+
+.card .price {
+	font-size: 1.2rem;
+	margin: 10px;
+	font-weight: bold;
+	
+}
+.card .price del{
+	font-weight: 100;
+	margin-left: 5px;
+	font-size: 0.9rem;
+}
+
+
+.card .button {
+	display: block;
+	margin: 10px auto;
+	padding: 10px;
+	background-color:var(--cor-site);
+	color: var(--cor-branca);
+	border: none;
+	border-radius: 5px;
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.rodape {
+	background-color: #f5f5f5;
+	padding: 40px 0;
+	margin-top:50px ;
+  }
+  
+  .rodape h4 {
+	font-size: 20px;
+	margin-bottom: 20px;
+  }
+  
+  .rodape ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+  }
+  
+  .rodape ul li a {
+	color: #333;
+	text-decoration: none;
+  }
+  
+  .rodape ul li a:hover {
+	color: #666;
+  }
+  
+  .rodape i {
+	margin-right: 10px;
+	font-size: 18px;
+	color: #333;
+  }
+  
+  .rodape p {
+	font-size: 14px;
+	margin-top: 20px;
+	text-align: center;
+  }
+  
+  .caixa {
+	margin: 0 auto;
+	padding: 15px;
+
+
+  }
+  
+  .row {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+  }
+  
+  .col-md-4 {
+	flex-basis: calc(33.33% - 30px);
+	margin-bottom: 30px;
+    text-align: center;
+  }
+  .col-md-12{
+    margin-top: 25px;
+  }
