@@ -1,18 +1,28 @@
 export default async function enviarRequisicao() {
     const url = 'https://api-materialize.onrender.com/suppliers'; 
+    
+    const nomeEmpresa = document.getElementById('nome-empresa').value;
+    const contato = document.getElementById('contato-empresa').value;
+    const emailEmpresa = document.getElementById('email-empresa').value;
+    const senhaEmpresa = document.getElementById('senha-empresa').value;
+    const cepEmpresa = document.getElementById('cep').value;
+    const estadoEmpresa = document.getElementById('uf').value;
+    const cidadeEmpresa = document.getElementById('localidade').value;
+    const bairroEmpresa = document.getElementById('bairro').value;
+    const ruaEmpresa = document.getElementById('logradouro').value;
+
     const dadosFornecedor = {
-        nomeDaEmpresa: 'Nome da Empresa',
-        contato: '89981401967',
-        email: 'endereco@gmail.com',
-        senha: "Som2013",
+        nomeEmpresa,
+        contato,
+        emailEmpresa,
+        senhaEmpresa,
         endereco: {
-            rua: 'Parinha',
-            cidade: 'picos',
-            estado: 'PI',
-            cep: '646405'
-        },
-        contato: 'Nome do Contato',
-        email: 'endereco@email.com'
+            cepEmpresa,
+            estadoEmpresa,
+            cidadeEmpresa,
+            bairroEmpresa,
+            ruaEmpresa
+        },  
     };
 
     try {
@@ -23,11 +33,10 @@ export default async function enviarRequisicao() {
             },
             body: JSON.stringify(dadosFornecedor)
         });
-
         if( response.status === 201) {
             alert("Papelaria cadastrada com sucesso!");
+            window.location.href = './item.html';
             console.log('Fornecedor criado com sucesso!');
-            window.location.href = 'item.html';
         } else if (response.status === 400) {
             console.error('Requisição inválida.');
         } else {

@@ -41,21 +41,18 @@
         </div>
         <div class="cotainer-form">
             <div class="border-form-papelaria-cadastro">
-                    <h1>Seja Nosso Parceiro </h1>
-
-                    <form action="" id="form-create-supllier" class="form-papelaria-cadastro">
-                        
-                    <form action="" class="form-papelaria-cadastro"  onsubmit="enviarRequisicao(event)">
+                    <h1>Seja Nosso Parceiro </h1>    
+                    <form action="" id="form-create-supllier" class="form-papelaria-cadastro"  onsubmit="enviarRequisicao(event)">
                         <label for="">Nome da papelaria</label>
-                        <input class="input-conta" type="text" placeholder="*">
+                        <input class="input-conta" type="text" id="nome-empresa" placeholder="*">
                         <label for="">Contato</label>
-                        <input class="input-conta" type="text" placeholder="*">
+                        <input class="input-conta" type="text" id="contato-empresa" placeholder="*">
                         <label for="">Email</label>
-                        <input class="input-conta" type="text" placeholder="*">
+                        <input class="input-conta" type="text" id="email-empresa" placeholder="*">
                         <label for="">Senha</label>
-                        <input class="input-conta" type="text" placeholder="*">
+                        <input class="input-conta" type="text" id="senha-empresa" placeholder="*">
                         <label for="">Cep</label>
-                        <input class="input-conta" type="text" placeholder="*"  maxlength="9" id="cep">
+                        <input class="input-conta" type="text" placeholder="*"   maxlength="9" id="cep">
                         <label for="">Estado onde reside a papelaria</label>
                         <input class="input-conta" type="text" placeholder="*" id="uf">
                         <label for="">Cidade</label>
@@ -67,7 +64,7 @@
                        
                         <div class="btns-papelaria">
                             <button class="btn-papelaria-voltar" type="submit" onclick="voltarTrablhoconosco()">Voltar</button>
-                            <button type="submit" class="btn-papelaria-salvar">Salvar</button>
+                            <button type="submit" class="btn-papelaria-salvar-enviar" onclick="enviarRequisicao()">Salvar</button>
                         </div>
                     </form>
                 </div>
