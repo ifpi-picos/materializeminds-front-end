@@ -1,8 +1,8 @@
 
 async function getRequestProduct() {
-	const url = ' https://api-materialize.onrender.com/product';
+	const url = 'https://api-materialize.onrender.com/product';
 
-	try {
+  try {
 		const response = await fetch(url, {
 			method: 'GET', 
 			headers: {
@@ -11,9 +11,9 @@ async function getRequestProduct() {
 		});
 	
 		if (response.status == 200) {
+
 			const dataProduct = await response.json();
-			console.log("DFD")
-			criarCards(dataProduct)
+      criarCards(dataProduct)
 		} else {
 			console.error('Erro na requisição:', response.status);
 		}
