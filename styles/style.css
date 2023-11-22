@@ -4,6 +4,7 @@
     --cor-terceirizada: #ec407a;
 
     --fonte-titulo : 1.3rem;
+    --fonte-familia: 'roboto';
 }
 
 /*tela de inicio */
@@ -208,9 +209,10 @@ body {
 
 }
 /*tela da cateoria lapis*/
+
 .product-list {
     display: flex;
-    flex-direction: column;
+    flex-direction: column!important;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -599,6 +601,7 @@ body {
 
 .input-conta::placeholder {
     color: var(--cor-principal);
+    
     display: flex;
     align-items: flex-end;
 
@@ -614,11 +617,10 @@ body {
     width: 100%;
     height: 40px;
     background-color: var(--cor-principal);
-    border: 1px solid var(--cor-principal);
-    
+    border: 1px solid var(--cor-principal);  
     border-radius: 15px;
 }
-.btn-papelaria-salvar {
+.btn-papelaria-salvar-enviar {
     cursor: pointer;
     width: 100%;
     height: 40px;
@@ -630,7 +632,7 @@ body {
 .btn-papelaria-voltar:hover {
     opacity:0.6;
 }
-.btn-papelaria-salvar:hover {
+.btn-papelaria-salvar-enviar:hover {
     opacity: 0.6;
 }
 /* segunda etapa*/
@@ -1002,15 +1004,17 @@ label{
     background-color: var(--cor-principal);
 }
 
+/*css samuel*/
+
 .Mensage{
 	margin-bottom: 50px;
 	padding: 10px 10px 0px  10px;
 	font-size: 20px;
-	font-family:monospace;
+	font-family:'roboto';
 	text-align: center;
 }
 
-.product-list{
+.listaze-produc{
     width: 90%;
 	display: grid; 
 	grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
@@ -1081,7 +1085,7 @@ label{
 }
 
 .rodape {
-	background-color: #f5f5f5;
+	background-color: #cdcd;
 	padding: 40px 0;
 	margin-top:50px ;
   }
@@ -1091,22 +1095,24 @@ label{
 	margin-bottom: 20px;
   }
   
-  .rodape ul {
-	list-style: none;
-	margin: 0;
-	padding: 0;
+.infor-list {
+      margin: 0;
+      padding: 0;
+    }
+    
+.link-infor{
+        color: #333;
+        text-decoration: none;
+        list-style: none;
   }
   
-  .rodape ul li a {
-	color: #333;
-	text-decoration: none;
+  .link-infor:hover {
+	color: var(--cor-principal);
   }
   
-  .rodape ul li a:hover {
-	color: #666;
-  }
-  
-  .rodape i {
+  .fab fa-facebook
+  .fab fa-twitter
+  .fab fa-instagram {
 	margin-right: 10px;
 	font-size: 18px;
 	color: #333;
@@ -1134,7 +1140,7 @@ label{
   .col-md-4 {
 	flex-basis: calc(33.33% - 30px);
 	margin-bottom: 30px;
-    text-align: center;
+    text-align: left;
   }
   .col-md-12{
     margin-top: 25px;
