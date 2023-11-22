@@ -1,10 +1,30 @@
 //document.getElementById('form-papelaria-item').addEventListener('submit', async (event) => {
   //  event.preventDefault();
   
-export async function criarProduto (dadosProduto) {
+ async function criarProduto (dadosProduto, idFornecedor) {
     const url = ' https://api-materialize.onrender.com/create-product';
+ 
 
+    const imagemPro = document.getElementById('imagem-produto').value;
+    const descricaoPro = document.getElementById('descricao-produto').value;
+    const categoriaPro = document.getElementById('categoria-produto').value;
+    const valorPro = document.getElementById('valor-produto').value;
+    const quantidadePro = document.getElementById('Quantidade-produto').value;
+
+    const dadosProduto = {
+        imagemPro,
+        descricaoPro,
+        categoriaPro,
+        valorPro,
+        quantidadePro
+    }
+    const idFornecedor = "id-for";
+    //Adiciona o ID do fornecedor aos dados do produto
+    dadosProduto.supplierId = idFornecedor;
     const formData = new FormData ();
+    const dadosProduto = {
+
+    }
     
     console.log(typeof(formData))
 
@@ -30,9 +50,9 @@ export async function criarProduto (dadosProduto) {
             console.error('Erro desconhecido.');
         }
     } catch (error) {
-        console.error('Erro na requisição:', erro.message);
+        console.error('Erro na requisição:', error.message);
     }
 
- criarProduto();
+ criarProduto(dadosProduto, idFornecedor);
 };
 

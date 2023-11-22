@@ -40,10 +40,10 @@
             <form action="" class="form-papelaria-item" id="form-papelaria-item" onsubmit="criarProduto(event)">
                 <h1>cadastrar itens </h1>
                 <label>Foto</label>
-                <input class="input-conta" type="file" >
+                <input class="input-conta" type="file"  id="imagem-produto">
                 <label for="">Descrição do item</label>
-                <textarea class="input-conta" type="text"></textarea>
-                <select class="input-conta" name="categoria" id="">
+                <textarea class="input-conta" type="text" id="descricao-produto"></textarea>
+                <select class="input-conta" name="categoria" id="categoria-produto" placeholder="*" >
                     <option value="">lapis</option>
                     <option value="">livro/caderno</option>
                     <option value="">pasta/post</option>
@@ -51,9 +51,9 @@
                     <option value="">arte</option>
                 </select>
                 <label for="">valor do item </label>
-                <input class="input-conta" type="number" placeholder="valor do item">
+                <input class="input-conta" type="number"  id="valor-produto" placeholder="*">
                 <label for="">Quantidade de item</label>
-                <input class="input-conta" type="number">
+                <input class="input-conta" type="number" id="Quantidade-produto" placeholder="*">
                 <div class="btns-papelaria">
                     <button class="btn-voltar" onclick="voltarParaCadrastro()">Voltar</button>
                     <button class="btn-salvar-item" onclick="criarProduto()">Salvar</button>
