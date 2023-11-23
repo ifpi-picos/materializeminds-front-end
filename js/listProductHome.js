@@ -1,6 +1,6 @@
 
 async function getRequestProduct() {
-	const url = 'https://api-materialize.onrender.com/product';
+	const url = 'http://localhost:3333/supllier';
 
   try {
 		const response = await fetch(url, {
