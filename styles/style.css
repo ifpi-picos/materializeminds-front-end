@@ -2,9 +2,19 @@
     --cor-principal: #ffc400;
     --cor-secundaria: #03a9f4;
     --cor-terceirizada: #ec407a;
-
+    
     --fonte-titulo : 1.3rem;
     --fonte-familia: 'roboto';
+
+    --cor-preta:black;
+	--cor-branca:#fff;
+	--cor-site:#ffc400;
+	--cor-bordas:rgb(194, 187, 187);
+	--cor-fundo:#fafafa;
+	--cor-rodape:#f5f5f5;
+	--font-category:Arial, Helvetica, sans-serif
+
+   
 }
 
 /*tela de inicio */
@@ -1042,7 +1052,7 @@ label{
   
 .card img {
 	display: block;
-	width: 200px;
+	width: 150px;
 	height: auto;
 	object-fit: cover;
 }
@@ -1060,9 +1070,10 @@ label{
 }
 
 .card .price {
-	font-size: 1.2rem;
+	font-size: 1.5rem;
 	margin: 10px;
 	font-weight: bold;
+        
 	
 }
 .card .price del{
@@ -1072,7 +1083,8 @@ label{
 }
 
 
-.card .button {
+
+.card .buttonS {
 	display: block;
 	margin: 10px auto;
 	padding: 10px;
@@ -1082,6 +1094,10 @@ label{
 	border-radius: 5px;
 	font-size: 1rem;
 	cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration:none
 }
 
 .rodape {

@@ -44,7 +44,7 @@ function criarCards(data) {
     preco.innerHTML = `R$ ${item.preco} <del>R$ ${oldPrice}</del>`; 
 
     const linkCompra = document.createElement('a');
-    linkCompra.className = 'button';
+    linkCompra.className = 'buttonS';
     linkCompra.href = item.link; 
     linkCompra.textContent = 'Compra';
 
