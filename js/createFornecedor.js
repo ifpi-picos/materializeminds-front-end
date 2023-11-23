@@ -1,27 +1,26 @@
 export default async function enviarRequisicao() {
-    const url = 'https://api-materialize.onrender.com/suppliers'; 
+    const url = 'http://localhost:3333/supllier'; 
     
     const nomeEmpresa = document.getElementById('nome-empresa').value;
     const contato = document.getElementById('contato-empresa').value;
-    const emailEmpresa = document.getElementById('email-empresa').value;
-    const senhaEmpresa = document.getElementById('senha-empresa').value;
-    const cepEmpresa = document.getElementById('cep').value;
-    const estadoEmpresa = document.getElementById('uf').value;
-    const cidadeEmpresa = document.getElementById('localidade').value;
-    const bairroEmpresa = document.getElementById('bairro').value;
-    const ruaEmpresa = document.getElementById('logradouro').value;
+    const email = document.getElementById('email-empresa').value;
+    const senha = document.getElementById('senha-empresa').value;
+    const cep = document.getElementById('cep').value;
+    const estado = document.getElementById('uf').value;
+    const cidade = document.getElementById('localidade').value;
+    // const bairro = document.getElementById('bairro').value;
+    const rua = document.getElementById('logradouro').value;
 
     const dadosFornecedor = {
         nomeEmpresa,
         contato,
-        emailEmpresa,
-        senhaEmpresa,
+        email,
+        senha,
         endereco: {
-            cepEmpresa,
-            estadoEmpresa,
-            cidadeEmpresa,
-            bairroEmpresa,
-            ruaEmpresa
+            rua,
+            cidade,
+            estado,
+            cep
         },  
     };
 
@@ -33,6 +32,9 @@ export default async function enviarRequisicao() {
             },
             body: JSON.stringify(dadosFornecedor)
         });
+        
+        const data = response.json
+
         if( response.status === 201) {
             alert("Papelaria cadastrada com sucesso!");
             window.location.href = './item.html';
@@ -43,9 +45,9 @@ export default async function enviarRequisicao() {
             console.error('Erro desconhecido.');
         }
     } catch (erro) {
-        console.error('Erro na requisição:', erro.message);
+        console.error(data.mensage);
 
     }
 
- enviarRequisicao();
 }
+enviarRequisicao();
