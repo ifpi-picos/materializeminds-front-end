@@ -6,9 +6,9 @@ document.getElementById('form-create-supllier').addEventListener('submit', async
     const email = document.getElementById('emailEmpresa').value;
     const senha = document.getElementById('senhaEmpresa').value;
     const cep = document.getElementById('cep').value;
-    const estado = document.getElementById('estado').value;
-    const cidade = document.getElementById('cidade').value;
-    const rua = document.getElementById('rua').value;
+    const estado = document.getElementById('uf').value;
+    const cidade = document.getElementById('localidade').value;
+    const rua = document.getElementById('bairro').value;
 
     const endereco = {
         rua,
@@ -29,7 +29,7 @@ document.getElementById('form-create-supllier').addEventListener('submit', async
 })
 
 async function enviarRequisicao(fornecedor) {
-    const url = 'http://localhost:3333/supllier'; 
+    const url = 'https://api-materialize.onrender.com/supllier'; 
 
     try {
         const response =  await fetch(url, {

@@ -44,21 +44,21 @@
                     <h1>Seja Nosso Parceiro </h1>    
                     <form action="" id="form-create-supllier" class="form-papelaria-cadastro"  onsubmit="enviarRequisicao(event)">
                         <label for="">Nome da papelaria</label>
-                        <input class="input-conta" type="text" id="nomeDaEmpresa" placeholder="*">
+                        <input class="input-conta" type="text" id="nomeDaEmpresa" placeholder="*" maxlength="50">
                         <label for="">Contato</label>
-                        <input class="input-conta" type="text" id="contatoEmpresa" placeholder="*">
+                        <input class="input-conta" type="text" id="contatoEmpresa" placeholder="*" maxlength="11">
                         <label for="">Email</label>
-                        <input class="input-conta" type="text" id="emailEmpresa" placeholder="*">
+                        <input class="input-conta" type="email" id="emailEmpresa" placeholder="*" maxlength="50">
                         <label for="">Senha</label>
-                        <input class="input-conta" type="text" id="senhaEmpresa" placeholder="*">
+                        <input class="input-conta" type="password" id="senhaEmpresa" placeholder="*" maxlength="30">
                         <label for="">Cep</label>
                         <input class="input-conta" type="text" placeholder="*"   maxlength="9" id="cep">
                         <label for="">estado</label>
-                        <input class="input-conta" type="text" placeholder="*" id="estado">
+                        <input class="input-conta" type="text" placeholder="*" id="uf" maxlength="2">
                         <label for="">cidade</label>
-                        <input class="input-conta" type="text" placeholder="*"  id="cidade">
+                        <input class="input-conta" type="text" placeholder="*"  id="localidade" maxlength="50">
                         <label for="">rua</label>
-                        <input class="input-conta" type="text" placeholder="*" id="rua">
+                        <input class="input-conta" type="text" placeholder="*" id="bairro" maxlength="50">
                        
                         <div class="btns-papelaria">
                             <button class="btn-papelaria-voltar" type="submit" onclick="voltarTrablhoconosco()">Voltar</button>
@@ -70,7 +70,8 @@
          </div>
      </main>
 </body>
-<!-- <script src="./js/endereco.js"></script> -->
+
+<script src="./js/endereco.js"></script>
 <script type="module" src="./js/createFornecedor.js"></script>
 
 </html>
