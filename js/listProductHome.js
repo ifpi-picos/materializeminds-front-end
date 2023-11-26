@@ -1,6 +1,6 @@
-
 async function getRequestProduct() {
-	const url = 'http://localhost:3333/supllier';
+
+  const url ='https://api-materialize.onrender.com/product'
 
   try {
 		const response = await fetch(url, {
@@ -8,10 +8,10 @@ async function getRequestProduct() {
 			headers: {
 				'Content-Type': 'application/json',
 			},
-		});
+		});    
 	
 		if (response.status == 200) {
-
+      
 			const dataProduct = await response.json();
       criarCards(dataProduct)
 		} else {

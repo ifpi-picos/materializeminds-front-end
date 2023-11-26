@@ -47,6 +47,7 @@ async function enviarRequisicao(fornecedor) {
             window.location.href = './item.html';
             console.log('Fornecedor criado com sucesso!');
         } else if (response.status === 400) {
+            console.log(data.message)
             alert(data.message)
         }
 

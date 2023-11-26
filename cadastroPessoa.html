@@ -14,14 +14,19 @@
         </div>
        <form class="form" id="createUserForm">
           <h2> Criar conta </h2>
+          
           <label for="">Nome completo</label>
-          <input class="input-conta" type="text" id="nameUser" required>
+          <input class="input-conta" type="text" id="nameUser" required maxlength="50">
+          
           <label for="">Email</label>
-          <input class="input-conta" type="text" id="emailUser" required>
+          <input class="input-conta" type="text" id="emailUser" required maxlength="50">
+          
           <label for="">Senha</label>
-          <input class="input-conta" type="password" id="passwordUser" required>
+          <input class="input-conta" type="password" id="passwordUser" required maxlength="25" >
+          
           <label for="">Celular</label>
-          <input class="input-conta" type="number" id="numberUser" required>
+          <input class="input-conta" type="tel" id="numberUser" required minlength="11" maxlength="11" >
+          
           <div class="btns-cadastro">
               <button class="btn-enviar-cadastro" type="submit">Enviar</button>
               <button class="btn-limpar-cadastro"  type="reset">Limpar</button>
@@ -29,6 +34,6 @@
           </div>
        </form>
     </div>
-    <script src="./js/createUser.js"></script>
+    <script  src="/js/createUser.js"></script>
 </body>
 </html>

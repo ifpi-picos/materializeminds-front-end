@@ -6,8 +6,6 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
   const senha = document.getElementById('passwordUser').value;
   const telefone = document.getElementById('numberUser').value;
 
-
-
   const user = {
     nome,
     email,
@@ -19,8 +17,8 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
 
 });
 
-async function fazerRequisicao() {
-  const url = ' https://api-materialize.onrender.com/user';
+async function fazerRequisicao(user) {
+  const url = 'https://api-materialize.onrender.com/user';
 
   try {
     const response = await fetch(url, {
@@ -31,18 +29,14 @@ async function fazerRequisicao() {
       body: JSON.stringify(user),
     });
 
-    if (response.status === 200) {
-      window.location.href = 'inicio.html';
-      alert("usuario criado com sucesso");
-      const data = await response.json();
-      console.log('Dados do servidor:', data);
+    const data = await response.json();
 
-    } else {
-      alert("usuario existente ");
-      window.location.href = 'conta.html';
-      const error = await response.json();
-      console.error('Erro no servidor:', error);
-      throw new Error(error.statusText || 'Erro desconhecido');
+    if (response.status === 200) {
+      alert("usuario criado com sucesso");
+      window.location.href = 'inicio.html';
+
+    } else if(response.status === 400) {
+      alert(data.message);;
     }
 
   } catch (error) {
@@ -51,8 +45,6 @@ async function fazerRequisicao() {
       console.error('Erro na requisição: E-mail já está em uso.');
     } else {
       console.error('Erro na requisição:', error.message);
-
-
     }
   }
 }
