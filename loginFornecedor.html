@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Endereço</title>
-    <link rel="stylesheet" href="styles/style.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles/style.css">
 </head>
 <body>
     <header class="header">
@@ -26,7 +26,7 @@
 
             <div class="nav-icons">
                 <a href="escolas.html"><img src="./fotos/escola.svg" width="32" height="32" title="escolas cadastrada"/></a>
-                <a href="login.html"><img src="./fotos/person.svg" width="32" height="32" title="perfil"/> </a>
+                <a href="conta.html"><img src="./fotos/person.svg" width="32" height="32" title="perfil"/> </a>
                 <a href="carrinho.html"><img src="./fotos/carinho.svg" width="32" height="32"/></a>
                 <a href="endereço.html">
                     <img src="./fotos/location.svg" width="32" height="32" />
@@ -35,30 +35,23 @@
             </div>
         </nav>
     </header>
-    <div class="cotainer">
-        <h1>Endereço da entrega</h1>
-        <form  class="form" >
-            <label for="">CEP</label>
-            <input class="input-conta" type="text" maxlength="9" id="cep">
-            <label for="">Estado</label>
-            <input class="input-conta" type="text" id="uf">
-            <label for="">Cidade</label>
-            <input class="input-conta" type="text" id="localidade">
-            <label for="">Bairro</label>
-            <input class="input-conta" type="text"id="bairro" >
-            <label for="">Rua</label>
-            <input class="input-conta" type="text" id="logradouro">
-            <label for="">Número</label>
-            <input class="input-conta" type="number" id="numero">
-            <label for="">Ponto de referencia</label>
-            <input class="input-conta" type="text">
-            <div class="btn-endereco">
-                <button class="btn-endereco-limpar" type="reset">Limpar</button>
-                <button class="btn-endereco-enviar" type="submit">Enviar</button>
+    <main class="container-conta">
+        <div class="border-conta">
+                <h2>Conta do Fornecedor</h2>
+            <form action="" id="formLoginSupllier" class="form-conta" >
+               <label for="">Email</label>
+               <input class="input-conta" id="email" type="text" >
+               <label for="">Senha</label>
+               <input class="input-conta" type="password" id="password" type="text" >
+               <div class="btns-cadastro">
+                <button class="btn-enviar-cadastro" type="submit">Entrar</button>
+                <button class="btn-limpar-cadastro"  onclick="cadastroDePapelaria()" href="/js/redirection/work.js">Cadastra-se</button>
             </div>
-        </form>
-    </div>
+            </form>
+        </div>
+       
+    </main>
+    <script src="/js/redirection/work.js"></script>
+    <script src="./js/loginUser.js"></script>
 </body>
-<script src="./js/item.js"></script>
-<script src="./js/endereco.js"></script>
 </html>

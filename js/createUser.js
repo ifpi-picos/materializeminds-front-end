@@ -19,7 +19,7 @@ document.getElementById('createUserForm').addEventListener('submit', async (even
 
 async function fazerRequisicao(user) {
   const url = 'https://api-materialize.onrender.com/user';
-
+  
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -33,7 +33,7 @@ async function fazerRequisicao(user) {
 
     if (response.status === 200) {
       alert("usuario criado com sucesso");
-      window.location.href = 'inicio.html';
+      window.location.href = 'home.html';
 
     } else if(response.status === 400) {
       alert(data.message);;
