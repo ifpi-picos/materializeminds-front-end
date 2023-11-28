@@ -6,3 +6,7 @@ function loginPapelaria(){
     window.location.href = 'loginFornecedor.html';
 
 }
+
+function voltarLogin() {
+    window.location.href= 'loginFornecedor.html'
+}
