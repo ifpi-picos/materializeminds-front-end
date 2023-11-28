@@ -96,9 +96,10 @@ body {
 .btn-acessar {
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
+    color: #000;
+
 }
 .btn-cadastrar {
-    background-color: #fff;
     border: 1px solid var(--cor-principal);;
     color: #000
 }
@@ -209,7 +210,6 @@ body {
     justify-content: right;
     gap: 35px;
 }
-
 .list {
     display: flex;
     flex-direction: row;
@@ -217,7 +217,6 @@ body {
     display: none;
     align-items: center;
 }
-
 .anuncio {
     width: 100vw;
     height:auto;
@@ -436,7 +435,7 @@ body {
 
 .img-lapis  img {
     width: 100%;
-    height: 600px;
+    height: auto;
 }
 
 .description-lapis {
@@ -551,6 +550,7 @@ body {
     width: 100%;
     background-color: var(--cor-secundaria);
     border: 1px solid var(--cor-secundaria);
+    color: #000;
 }
 .btn-enviar-cadastro:hover {
     opacity: 0.6;
@@ -563,6 +563,7 @@ body {
     width: 100%;
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
+    color: #000;
 }
 .btn-limpar-cadastro:hover {
     opacity: 0.6;
@@ -575,6 +576,7 @@ body {
     width: 100%;
     border: 1px solid var(--cor-terceirizada);
     background-color: var(--cor-terceirizada);
+    color: #000;
 }
 .btn-cancelar-cadastro:hover {
     opacity: 0.6;
@@ -625,6 +627,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000;
 
 }
 .btn-endereco-enviar:hover,.btn-endereco-limpar:hover {
@@ -643,6 +646,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #000;
 
 }
 /* tela trabalhe conosco convencendo o cliente*/
@@ -865,7 +869,7 @@ body {
     border-radius: 8px;
     border: 1px solid var(--cor-principal);
     height: 40px;
-
+    color: #000;
 }
 .btn-salvar-item {
     cursor: pointer;
@@ -874,6 +878,7 @@ body {
     background-color: var(--cor-secundaria);
     border:  1px solid var(--cor-secundaria);
     border-radius: 8px;
+    color: #000;
 }
 label{
     font-family: "Roboto";
@@ -929,6 +934,7 @@ label{
     border: 1px solid var(--cor-principal);
     height: 40px;
     font-size: 20px;
+    color: #000;
 }
 .btn-salvar-conta {
     width: 100%;
@@ -937,6 +943,7 @@ label{
     border: 1px solid var(--cor-secundaria);
     height: 40px;
     font-size: 20px;
+    color: #000;
 
 }
 .btn-excluir-conta {
@@ -946,6 +953,7 @@ label{
     border: 1px solid var(--cor-terceirizada);
     height: 40px;
     font-size: 20px;
+    color: #000;
 
 
 }
@@ -1111,7 +1119,6 @@ label{
     box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
     display: flex;
     flex-direction: column;
-
 }
 .card-pagamento {
    width: 100%;
@@ -1120,7 +1127,6 @@ label{
    flex-direction: column;
    justify-content: space-evenly;
    align-items: center;
-
 }
 .forma-de-pagamento {
     display: flex;
@@ -1135,7 +1141,6 @@ label{
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
     font-size: 20px;
-
 }
 .pagamento-pix {
     width: 100%;
@@ -1157,8 +1162,6 @@ label{
     margin: 150px ;
     padding: 20px;
     box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
-
-
 }
 .menu {
     display: flex;
@@ -1205,8 +1208,6 @@ label{
 .sucesso {
     background-color: var(--cor-principal);
 }
-
-
 
 /*  responsivo */
 @media only screen  and (max-width: 768px )  {
