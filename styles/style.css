@@ -218,13 +218,13 @@ body {
     align-items: center;
 }
 .anuncio {
-    width: 100vw;
+    width: 100%;
     height:auto;
    
 }
 .anuncio img {
     width: 100%;
-    max-width: 100%;
+    /* max-width: 100%; */
     height: auto;
     display: block;
     margin: auto;cursor: zoom-in;
@@ -393,6 +393,7 @@ body {
 .row {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
     justify-content: center;
     gap: 1rem;
 }
@@ -505,7 +506,7 @@ body {
 .container {
     margin: 50px auto;
     width: 60%;
-    height: 700px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -515,7 +516,7 @@ body {
 }
 .img {
     width: 50%;
-    height: 100px;
+    height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -580,6 +581,13 @@ body {
 }
 .btn-cancelar-cadastro:hover {
     opacity: 0.6;
+}
+@media only screen and (max-width: 768px) {
+    .btns-cadastro {
+        max-width: 100%;
+        height: auto;
+    }
+    
 }
 /* tela de endereço*/
 .cotainer {
@@ -948,7 +956,7 @@ label{
 }
 .btn-excluir-conta {
     width: 100%;
-    background-color: var(--cor-terciaria);
+    background-color: var(--cor-terceirizada);
     border-radius: 8px;
     border: 1px solid var(--cor-terceirizada);
     height: 40px;
