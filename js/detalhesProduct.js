@@ -1,7 +1,7 @@
 // Função para criar o modal card dinamicamente dentro de uma div e preencher com dados
-function createModalCard(containerId, productData) {
+function createModalCard(productData) {
   
-  var container = document.getElementById(containerId);
+  var container = document.getElementById('product-list');
 
   // Criação dos elementos do modal card
   var modalCard = document.createElement("div");
@@ -63,7 +63,6 @@ function createModalCard(containerId, productData) {
   }
   
   openModalBtn.onclick = function() {
-    alert('oi')
     // Simulando dados do produto (substitua com dados reais)
     modalCard.style.display = "block";
   }
@@ -93,3 +92,4 @@ var productData = {
 };
 
 // Chamando a função para criar o modal card dentro da div com o ID "modalContainer"
+createModalCard("product-list", productData);
