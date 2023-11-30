@@ -44,7 +44,7 @@ async function enviarRequisicao(fornecedor) {
 
         if( response.status === 201) {
             alert("Papelaria cadastrada com sucesso!");
-            window.location.href = './item.html';
+            window.location.href = './loginFornecedor.html';
             console.log('Fornecedor criado com sucesso!');
         } else if (response.status === 400) {
             console.log(data.message)

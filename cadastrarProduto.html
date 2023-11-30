@@ -32,37 +32,43 @@
     </header>
 
     <main class="item">
-        <div class="border-form-papelaria-item">
-					
-					<form action="" class="form-papelaria-item" id="form-papelaria-item" onsubmit="criarProduto(event)">
-							<h1>cadastrar itens </h1>
-							<label>Foto</label>
-							<input class="input-conta" type="file">
-							
-                            <label for="">Descrição do item</label>
-							<textarea class="input-conta" type="text"></textarea>
-							<select class="input-conta" name="categoria" id="">
-									<option value="">lapis</option>
-									<option value="">livro/caderno</option>
-									<option value="">pasta/post</option>
-									<option value="">mochila</option>
-									<option value="">arte</option>
-							</select>
-							
-                            <label for="">valor do item </label>
-							<input class="input-conta" type="number" placeholder="valor do item">
-							
-                            <label for="">Quantidade de item</label>
-							<input class="input-conta" type="number">
-							
-                            <div class="btns-papelaria">
-									<button class="btn-voltar" type="button" onclick="pageHomeFornecedor()">Voltar</button>
-									<button class="btn-salvar-item" type="submit" onclick="criarProduto()">Salvar</button>
-							</div>
-					</form>
+        <div class="border-form-papelaria-item">	
+            <form action="" class="form-papelaria-item" id="form-papelaria-item" onsubmit="criarProduto(event)">
+                    <h1 style="text-align: center;">cadastrar itens </h1>
+                    
+                    <label>Imagem do produto</label>
+                    <input id="fileImg" class="input-conta" type="file">
+                    
+                    <label for="">Nome</label>
+                    <input id="nomeDoProduto" class="input-conta" type="text" >
+
+                    <label for="">Descrição</label>
+                    <textarea id="Descricao" class="input-conta" type="text"></textarea>
+
+                    <label for="">Categoria</label>
+                    <select class="input-conta" name="categoria" id="categoria">
+                            <option value="lapis">lapis</option>
+                            <option value="livro/caderno">livro/caderno</option>
+                            <option value="pasta/post">pasta/post</option>
+                            <option value="mochila">mochila</option>
+                            <option value="arte">arte</option>
+                    </select>
+                    
+                    <label for="">Valor</label>
+                    <input type="number" id="preco" class="input-conta">
+                    
+                    <label for="">Quantidade</label>
+                    <input type="number" id="quantidade" class="input-conta">
+                    
+                    <div class="btns-papelaria">
+                            <button class="btn-voltar" type="button" onclick="irParaPgIncio()">Voltar</button>
+                            <button class="btn-salvar-item" type="submit">Salvar</button>
+                    </div>
+            </form>
         </div>
     </main>
-		<script src="/js/redirection/acessar.js"></script>
-    <script src="./js/createProduto.js"></script>
+	
+    <script src="/js/redirection/acessar.js"></script>
+    <script src="/js/createProduto.js"></script>
 </body>
 </html>
