@@ -943,6 +943,7 @@ body {
     border: 1px solid var(--cor-principal);
     height: 40px;
     color: #000;
+    cursor: pointer;
 }
 .btn-salvar-item {
     cursor: pointer;
