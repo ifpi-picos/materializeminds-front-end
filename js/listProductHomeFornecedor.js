@@ -24,7 +24,7 @@ async function getRequestProduct() {
 
 function criarCards(data) {
   const container = document.getElementById('product-list');
-
+  
   container.innerHTML = '';
 
   data.forEach(item => {

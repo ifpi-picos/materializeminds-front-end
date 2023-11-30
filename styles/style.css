@@ -1310,31 +1310,14 @@ label{
 
   .modal-card {
     background-color: #fff;
-    margin: 10% auto;
+    margin:  auto;
     padding: 20px;
-    width: 70%;
+    width: 80%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    position: relative;
-  }
-  
-  .close {
-    color: #aaa;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 24px;
-    font-weight: bold;
-    cursor: pointer;
-  }
-  
-  .modal-content {
-    padding: 20px;
-  }
-  
-  .close:hover,
-  .close:focus {
-    color: black;
-    text-decoration: none;
-  }
-  
+    position: fixed;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    
+}

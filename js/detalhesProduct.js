@@ -1,95 +1,77 @@
-// Função para criar o modal card dinamicamente dentro de uma div e preencher com dados
-function createModalCard(productData) {
-  
-  var container = document.getElementById('product-list');
+async function getRequestProduct() {
 
-  // Criação dos elementos do modal card
-  var modalCard = document.createElement("div");
-  modalCard.classList.add("modal-card");
+  const url ='https://api-materialize.onrender.com/product'
 
-  var closeBtn = document.createElement("span");
-  closeBtn.classList.add("close");
-  closeBtn.id = "closeModalBtn";
-  closeBtn.innerHTML = "&times;";
-
-  var modalContent = document.createElement("div");
-  modalContent.classList.add("modal-content");
-
-  var modalTitle = document.createElement("h2");
-  modalTitle.innerText = "Informações do Produto";
-
-  var productName = document.createElement("p");
-  productName.innerHTML = "<strong>Nome:</strong> <span id='productName'></span>";
-
-  var productId = document.createElement("p");
-  productId.innerHTML = "<strong>ID:</strong> <span id='productId'></span>";
-
-  var productDescription = document.createElement("p");
-  productDescription.innerHTML = "<strong>Descrição:</strong> <span id='productDescription'></span>";
-
-  var productCategory = document.createElement("p");
-  productCategory.innerHTML = "<strong>Categoria:</strong> <span id='productCategory'></span>";
-
-  var productValue = document.createElement("p");
-  productValue.innerHTML = "<strong>Valor:</strong> <span id='productValue'></span>";
-
-  var productStock = document.createElement("p");
-  productStock.innerHTML = "<strong>Estoque:</strong> <span id='productStock'></span>";
-  
-  // Adicionando os elementos ao modal card
-  modalContent.appendChild(modalTitle);
-  modalContent.appendChild(productName);
-  modalContent.appendChild(productId);
-  modalContent.appendChild(productDescription);
-  modalContent.appendChild(productCategory);
-  modalContent.appendChild(productValue);
-  modalContent.appendChild(productStock);
-  
-  modalCard.appendChild(closeBtn);
-  modalCard.appendChild(modalContent);
-  
-  container.appendChild(modalCard);
-
-  // Função para preencher o modal com dados do produto
-  function fillModalWithData(productData) {
-    document.getElementById("productName").innerText = productData.name;
-    document.getElementById("productId").innerText = productData.id;
-    document.getElementById("productDescription").innerText = productData.description;
-    document.getElementById("productCategory").innerText = productData.category;
-    document.getElementById("productValue").innerText = productData.value;
-    document.getElementById("productStock").innerText = productData.stock;
-    
-    modalCard.style.display = "none";
-  }
-  
-  openModalBtn.onclick = function() {
-    // Simulando dados do produto (substitua com dados reais)
-    modalCard.style.display = "block";
-  }
-  
-
-  // Evento para fechar o modal
-  closeBtn.onclick = function() {
-    modalCard.style.display = "none";
-  }
-
-  // Fechar o modal se o usuário clicar fora da área do modal
-  window.onclick = function(event) {
-    if (event.target == modalCard) {
-      modalCard.style.display = "none";
-    }
-  }
+  try {
+		const response = await fetch(url, {
+			method: 'GET', 
+			headers: {
+				'Content-Type': 'application/json',
+			},
+		});    
+	
+		if (response.status == 200) {
+      
+			const dataProduct = await response.json();
+      return dataProduct
+		} else {
+			console.error('Erro na requisição:', response.status);
+		}
+	} catch (error) {
+		console.error('Erro ao realizar a requisição:', error);
+	}
 }
 
-// Simulando dados do produto (substitua com dados reais)
-var productData = {
-  name: "Produto Exemplo",
-  id: "123456",
-  description: "Descrição do produto...",
-  category: "Categoria Exemplo",
-  value: "$19.99",
-  stock: 50
-};
 
-// Chamando a função para criar o modal card dentro da div com o ID "modalContainer"
-createModalCard("product-list", productData);
+function createModalCard(dataProduct){
+  var cards = document.querySelectorAll('.card');
+  
+  cards.forEach(function(card, index) {
+    card.addEventListener('click', async function() {
+      const dataProduct = await getRequestProduct()
+      const product = dataProduct[index]
+      console.log(product.nomeDoProduto)
+
+      openModal(
+        product.id,
+        product.nomeDoProduto,
+        product.descricao,
+        product.preco,
+        product.estoque,
+        product.categoria
+        )
+    });  
+  });
+
+}
+
+
+function openModal(id, nomeDoProduto, descricao, preco, estoque, categoria) {
+
+  var modalHTML = `
+      <div id="myModal" class="modal">
+          <div class="modal-content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2 class="center">${nomeDoProduto}</h2>
+              <p>${descricao}</p>
+              <p><strong>Preço:</strong> R$ ${preco.toFixed(2)}</p>
+              <p><strong>Estoque:</strong> ${estoque}</p>
+              <p><strong>Categoria:</strong> ${categoria}</p>
+              <div class="center">
+                <button onclick="alert('ID: ${id}')">Editar</button>
+                <button onclick="alert('ID: ${id}')">Excluir</button>
+              </div>
+          </div>
+      </div>
+  `;
+
+  const conter = document.getElementById('container')
+
+  conter.innerHTML = modalHTML;
+  document.getElementById('myModal').style.display = 'flex';
+}
+
+function closeModal() {
+  var modal = document.getElementById('myModal');
+  modal.style.display = "none";
+}
