@@ -27,7 +27,7 @@
             <div class="nav-icons">
                 <a href="escolas.html"><img src="./fotos/escola.svg" width="32" height="32" title="escolas cadastrada"/></a>
                 <a href="conta.html"><img src="./fotos/person.svg" width="32" height="32" title="perfil"/> </a>
-                <a href=""><img src="./fotos/carinho.svg" width="32" height="32"/></a>
+                <a href="carrinho.html"><img src="./fotos/carinho.svg" width="32" height="32"/></a>
                 <a href="endereço.html">
                     <img src="./fotos/location.svg" width="32" height="32" />
                 </a>
@@ -38,7 +38,7 @@
     <main class="main">
         <h1>lapis/caneta</h1>
         <ul class="product-list">
-            <li class="product-item">
+            <li class="product-item" id="produto1">
                 <div class="img-lapis">
                     <img src="https://m.media-amazon.com/images/I/51jYL7DVouL.jpg" alt="Produto 1" class="product-image">
                 </div>
@@ -52,7 +52,7 @@
                             </div>
                             <div class="product-price">$5.99</div>
                     <div class="btns-de-categoria">
-                        <button class="btn-adicionar-ao-carrinho" onclick="adicionarAoCarrinho('Produto 1', 20.00)">Adicionar ao carrinho</button>
+                        <button class="btn-adicionar-ao-carrinho" onclick="adicionarAoCarrinho('Produto 1',  20.00)">Adicionar ao carrinho</button>
                         <button class="btn-comprar-agora" >Comprar agora</button>
                     </div>
                 </div>
@@ -75,13 +75,14 @@
                     <div class="product-price">$31,50</div>
                     <div class="btns-de-categoria">
                         <button class="btn-adicionar-ao-carrinho" onclick="adicionarAoCarrinho()">Adicionar ao carrinho</button>
-                        <button class="btn-comprar-agora">Comprar agora</button>
+                        <button class="btn-comprar-agora" onclick="pagarAgora()">Comprar agora</button>
                     </div>
                 </div>
             </li>
          </ul>
 
     </main>
-    <script src="./js/prodc.js"></script>
+<!-- <script src="./js/prodc.js"></script> -->
+<script src="./js/produto.1.js"></script>
 </body>
 </html>

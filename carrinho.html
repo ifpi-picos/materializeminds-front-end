@@ -27,7 +27,7 @@
             <div class="nav-icons">
                 <a href="escolas.html"><img src="./fotos/escola.svg" width="32" height="32" title="escolas cadastrada"/></a>
                 <a href="conta.html"><img src="./fotos/person.svg" width="32" height="32" title="perfil"/> </a>
-                <a href=""><img src="./fotos/carinho.svg" width="32" height="32"/></a>
+                <a href="carrinho.html"><img src="./fotos/carinho.svg" width="32" height="32"/></a>
                 <a href="endereço.html">
                     <img src="./fotos/location.svg" width="32" height="32" />
                 </a>
@@ -36,17 +36,19 @@
         </nav>
     </header>
     <main class="principal">
-        <div class="btn-para-voltar">
+        <!-- <div class="btn-para-voltar">
             <a href=""><- Voltar</a>
             <button class="btn-voltar-carrinho" type="submit">- Voltar</button>
-        </div>
+        </div> -->
+        <h1>carrinho de compras</h1>
         <div class="container-carrinho">
-            <h1>carrinho de compras</h1>
-            <ul class="carrinhoLista" id="carrinhoLista">
+            <ul class="carrinhoLista" id="carrinho-list">
 
             </ul>
-            <p>Total: R$ <span id="totalCarrinho">0.00</span></p>
-            <button onclick="IrparaPaginaPagsamento()">pagamaento</button>
+            <div class="quantify-value">
+                <p>Total: R$ <span id="totalCarrinho">0.00</span></p>
+                <button class="btn-pagar-conta" onclick="IrparaPaginaPagsamento()">pagamento</button>
+            </div>
         </div>
         <div class="produtros">
 
@@ -66,6 +68,6 @@
                 <a href="" title="arte/tint/pinceis"><img src="./fotos/pallete.svg" width="80" height="80"></a>
             </div>
     </main>
-    <script src="./js/produto.js"></script>
+    <script src="./js/carrinho.js"></script>
 </body>
 </html>

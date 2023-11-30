@@ -180,7 +180,7 @@ body {
     margin-right: 20px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 16px;
+    /* font-size: 16px; */
 }
 .input-group > input {
     border: none !important;
@@ -381,7 +381,7 @@ body {
     color: #333;
   }
 .rodape p {
-    font-size: 14px;
+    /* font-size: 14px; */
     margin-top: 20px;
     text-align: center;
 }
@@ -481,6 +481,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: #000;
     /* font-size: 18px; */
 
 
@@ -496,6 +497,7 @@ body {
     background-color: var(--cor-secundaria);
     border:  1px solid var(--cor-secundaria);
     /* font-size: 18px; */
+    color: #000;
 }
 @media only screen and (max-width: 768px) {
     .main {
@@ -811,6 +813,7 @@ body {
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
+    color: #000;
 }
 .btn-work:hover {
     opacity: 0.6;
@@ -867,6 +870,7 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    color: #000;
 
 }
 .form-papelaria-cadastro {
@@ -899,6 +903,7 @@ body {
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 15px;
+    color: #000;
 }
 .btn-papelaria-salvar-enviar {
     cursor: pointer;
@@ -907,6 +912,7 @@ body {
     background-color: var(--cor-secundaria);
     border:  1px solid var(--cor-secundaria);
     border-radius: 15px;
+    color: #000;
 }
 .btn-papelaria-voltar:hover {
     opacity:0.6;
@@ -991,7 +997,7 @@ label{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    font-size: 24px;
+   
 
 }
 .btns-conta {
@@ -1007,7 +1013,7 @@ label{
     border-radius: 8px;
     border: 1px solid var(--cor-principal);
     height: 40px;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #000;
 }
 .btn-salvar-conta {
@@ -1016,7 +1022,7 @@ label{
     border-radius: 8px;
     border: 1px solid var(--cor-secundaria);
     height: 40px;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #000;
 
 }
@@ -1026,7 +1032,7 @@ label{
     border-radius: 8px;
     border: 1px solid var(--cor-terceirizada);
     height: 40px;
-    font-size: 20px;
+    /* font-size: 20px; */
     color: #000;
 
 
@@ -1060,7 +1066,7 @@ label{
     flex-direction: column!important;
     justify-content: center;
     gap: 1rem;
-    font-size: 24px;
+    /* font-size: 24px; */
      padding: 0;
      margin: 0;
 
@@ -1068,7 +1074,7 @@ label{
 
 .btn-school  {
     width: 100%;
-    height: 200px;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -1087,8 +1093,9 @@ label{
     height: 40px;
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
-    font-size: 20px;
+    /* font-size: 20px; */
     border-radius: 8px;
+    color: #000;
 }
 .btn-cadastrar-school {
     margin: 5px;
@@ -1100,8 +1107,9 @@ label{
     height: 40px;
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
-    font-size: 20px;
+    /* font-size: 20px; */
     border-radius: 8px;
+    color: #000;
 }
 /* carrinho*/
 .principal {
@@ -1119,7 +1127,7 @@ label{
 .btn-voltar-carrinho {
     width: 30%;
     height: 40px;
-    font-size: 20px;
+    /* font-size: 20px; */
     background-color: #fff;
     border: 1px solid #fff;
 
@@ -1155,7 +1163,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 .btn-pagamento-pix {
     width: 30%;
@@ -1163,7 +1171,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 .btn-pagamento-cartao {
     width: 30%;
@@ -1171,7 +1179,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 .btn-finalizar-compra {
     width: 30%;
@@ -1179,7 +1187,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 /* tela de pagamento */
 .card-border-pag {
@@ -1189,7 +1197,7 @@ label{
 }
 .produtos-selecionados {
     width: 100%;
-    height: 600px;
+    height: auto;
     box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
     display: flex;
     flex-direction: column;
@@ -1214,7 +1222,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
-    font-size: 20px;
+    /* font-size: 20px; */
 }
 .pagamento-pix {
     width: 100%;
@@ -1222,7 +1230,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
-    font-size: 20px;
+    /* font-size: 20px; */
 
 }
 .form-pagamento {
@@ -1321,4 +1329,41 @@ label{
     left: 0;
     top: 0;
     
+}
+.principal {
+    width: 90%;
+    margin: auto;
+    
+}
+/* carrinho */
+.container-carrinho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 1rem;
+    
+}
+.carrinhoLista {
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
+
+}
+.quantify-value {
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
+}
+
+.btn-pagar-conta {
+    height: 40px;
+    width: 30%;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
 }
