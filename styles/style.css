@@ -388,6 +388,10 @@ body {
 .caixa {
     margin: 0 auto;
     padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .row {
@@ -575,7 +579,7 @@ body {
     gap: 1rem;
 }
 .btn-enviar-cadastro {
-    /* font-size: 18px; */
+    font-weight: 200;
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
@@ -589,6 +593,7 @@ body {
 }
 .btn-limpar-cadastro {
     /* font-size: 18px; */
+    font-weight: 200;
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
@@ -602,6 +607,7 @@ body {
 }
 .btn-cancelar-cadastro {
     /* font-size: 18px; */
+    font-weight: 200;
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
@@ -620,8 +626,14 @@ body {
         display: flex;
         flex-direction: column;
     }
-    .btn-cancelar-cadastro
-    .btn-limpar-cadastro 
+
+    .btn-cancelar-cadastro {
+        max-width: 100%;
+    }
+    .btn-limpar-cadastro {
+        max-width: 100%;
+    }
+
     .btn-enviar-cadastro {
         max-width: 100%;
     }
@@ -634,20 +646,19 @@ body {
     font-size: 1.2rem;
     font-family: var(--fonte-familia);
     display: flex;
-    height: 870px;
+    height: auto;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     background-color: #fff;
     box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
-
 }
 .form {
     /* font-size: 20px; */
     display: flex;
     flex-direction: column;
     width: 80%;
-    height: 750px;
+    height: auto;
    /* align-items: center;*/
     align-content: center;
     justify-items: center;
@@ -662,6 +673,7 @@ body {
     gap: 1rem;
 }
 .btn-endereco-enviar {
+    font-weight: 200;
     cursor: pointer;
     width: 50%;
     height: 40px;
@@ -678,9 +690,8 @@ body {
 .btn-endereco-enviar:hover,.btn-endereco-limpar:hover {
     opacity: 0.6;
 }
-
-
 .btn-endereco-limpar {
+    font-weight: 200;
     cursor: pointer;
     width: 50%;
     height: 40px;
@@ -692,34 +703,10 @@ body {
     justify-content: center;
     align-items: center;
     color: #000;
+}
 
-}
 /* tela trabalhe conosco convencendo o cliente*/
-/* .imagem-fundo {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-}
-.imagem-fundo::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url("https://img.freepik.com/vetores-gratis/cenografia-de-elementos-de-papelaria-empresarial-moderno_1017-30618.jpg?size=626&ext=jpg"); /* Substitua pelo caminho real da sua imagem */
-    /* background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    opacity: 0.4;  Valor entre 0 (totalmente transparente) e 1 (opaco)
-    z-index: -1;  Coloca o pseudo-elemento atrás do conteúdo
-}  */
+
 .work-papelaria {
     margin: 50px auto;
     width: 100%;
@@ -748,7 +735,6 @@ body {
     flex-direction: row;
     gap: 2rem;
     /*box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);*/
-
 }
 .descrição {
     width: 30%;
@@ -871,7 +857,6 @@ body {
     align-items: center;
     justify-content: center;
     color: #000;
-
 }
 .form-papelaria-cadastro {
     width: 80%;
@@ -882,9 +867,7 @@ body {
     align-content: center;
     justify-items: center;
     gap: 0.80rem;
-
 }
-
 .input-conta::placeholder {
     color: var(--cor-principal);
     display: flex;
@@ -902,7 +885,7 @@ body {
     height: 40px;
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
-    border-radius: 15px;
+    border-radius: 8px;
     color: #000;
 }
 .btn-papelaria-salvar-enviar {
@@ -911,7 +894,7 @@ body {
     height: 40px;
     background-color: var(--cor-secundaria);
     border:  1px solid var(--cor-secundaria);
-    border-radius: 15px;
+    border-radius: 8px;
     color: #000;
 }
 .btn-papelaria-voltar:hover {
@@ -993,20 +976,17 @@ label{
     margin: 20px;
     padding: 20px;
     width: 80%;
-    height: 600px;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-   
-
+    gap: 1rem;
 }
 .btns-conta {
     display: flex;
     width: 100%;
-    gap: 2rem!important;
+    gap: 1rem!important;
 }
-
-
 .btn-historico-conta {
     width: 100%;
     background-color: var(--cor-principal);
@@ -1024,7 +1004,6 @@ label{
     height: 40px;
     /* font-size: 20px; */
     color: #000;
-
 }
 .btn-excluir-conta {
     width: 100%;
@@ -1034,8 +1013,25 @@ label{
     height: 40px;
     /* font-size: 20px; */
     color: #000;
+}
+/* responsivo */
+@media only screen and (max-width: 768px) {
+    .btns-conta {
+        display: flex;
+        flex-direction: column;
+    }
 
+    .btn-historico-conta {
+       width: 100%;
+    }
+    .btn-salvar-conta {
+       width: 100%;
 
+    }
+    .btn-excluir-conta {
+       width: 100%;
+
+    }
 }
 /* tela das escolas*/
 .container-school {
@@ -1054,14 +1050,12 @@ label{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-
 }
 
 .list-school {
     margin: 50px!important;
     width: 90%;
-    height: 400px;
+    height: auto;
     display: flex;
     flex-direction: column!important;
     justify-content: center;
@@ -1069,7 +1063,6 @@ label{
     /* font-size: 24px; */
      padding: 0;
      margin: 0;
-
 }
 
 .btn-school  {
@@ -1111,7 +1104,57 @@ label{
     border-radius: 8px;
     color: #000;
 }
-/* carrinho*/
+@media only screen and (max-width: 768px) {
+    .list-card {
+        width: 90%;
+    }
+    .list-school {
+        width: 100%;
+    }
+    .btn-school {
+        width: 100%;
+    }
+    .btn-acessar-lista {
+        width: 80%;
+    }
+    .btn-cadastrar-school {
+        width: 80%;
+    }
+}
+
+/* carrinho */
+.container-carrinho {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    gap: 1rem;
+    
+}
+.carrinhoLista {
+    width: 80%;
+    padding: 20px;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
+
+}
+.quantify-value {
+    width: 80%;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
+}
+
+.btn-pagar-conta {
+    height: 40px;
+    width: 30%;
+    background-color: var(--cor-principal);
+    border: 1px solid var(--cor-principal);
+    color: #000;
+}
 .principal {
     margin: 50px auto;
     width: 100%;
@@ -1121,29 +1164,7 @@ label{
     flex-direction: column;
     gap: 1rem;
 }
-.btn-papelaria-voltar {
-    width: 100%;
-}
-.btn-voltar-carrinho {
-    width: 30%;
-    height: 40px;
-    /* font-size: 20px; */
-    background-color: #fff;
-    border: 1px solid #fff;
 
-}
-.container-carrinho {
-    width: 90%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
-}
-.produto {
-    border:  1px solid #80d8ff;
-    width: 50%;
-
-}
 .valor {
     width: 45%;
     display: flex;
@@ -1163,6 +1184,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
+    color: #000;
     /* font-size: 20px; */
 }
 .btn-pagamento-pix {
@@ -1171,6 +1193,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
+    color: #000;
     /* font-size: 20px; */
 }
 .btn-pagamento-cartao {
@@ -1187,15 +1210,37 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
+    color: #000;
     /* font-size: 20px; */
+}
+@media only screen and (max-width: 768px) {
+    .container-carrinho {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .btn-pagar-conta {
+        width: 100%;
+    }
+
 }
 /* tela de pagamento */
 .card-border-pag {
     display: flex;
-    width: 95%;
+    width: 90%;
     gap: 2rem;
+    padding: 10px;
+}
+@media only screen and (max-width: 768px) {
+    .card-border-pag {
+        display: flex;
+        flex-direction: column;
+    }
 }
 .produtos-selecionados {
+    padding: 10px;
+    margin: 10px;
     width: 100%;
     height: auto;
     box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
@@ -1204,6 +1249,8 @@ label{
 }
 .card-pagamento {
    width: 100%;
+   padding: 10px;
+   margin: 10px;
    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
    display: flex;
    flex-direction: column;
@@ -1222,6 +1269,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
+    color: #000;
     /* font-size: 20px; */
 }
 .pagamento-pix {
@@ -1230,6 +1278,7 @@ label{
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     border-radius: 8px;
+    color: #000;
     /* font-size: 20px; */
 
 }
@@ -1257,7 +1306,7 @@ label{
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: auto;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
@@ -1274,7 +1323,6 @@ label{
     align-items: center;
     gap: 1rem;
 }
-
 .close {
     color: #ec407a;
     float: right;
@@ -1282,7 +1330,6 @@ label{
     cursor: pointer;
     background-color: var(--cor-terciaria);
 }
-
 .close:hover {
     color: red;
     background-color: var(--cor-terciaria);
@@ -1290,11 +1337,8 @@ label{
 .sucesso {
     background-color: var(--cor-principal);
 }
-
 /*  responsivo */
 @media only screen  and (max-width: 768px )  {
-   
-
     .list-nav {
         display: none;
         flex-direction: column;
@@ -1334,36 +1378,4 @@ label{
     width: 90%;
     margin: auto;
     
-}
-/* carrinho */
-.container-carrinho {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    width: 80%;
-    gap: 1rem;
-    
-}
-.carrinhoLista {
-    width: 80%;
-    padding: 20px;
-    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
-
-}
-.quantify-value {
-    width: 100%;
-    height: auto;
-    padding: 20px;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    box-shadow: 0px 0px 16px 0px rgba(242, 208, 13, 0.973);
-}
-
-.btn-pagar-conta {
-    height: 40px;
-    width: 30%;
-    background-color: var(--cor-principal);
-    border: 1px solid var(--cor-principal);
 }
