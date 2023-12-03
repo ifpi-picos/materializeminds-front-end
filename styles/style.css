@@ -121,7 +121,7 @@ body {
         display: flex;
         justify-content: center;
         font-size: 1rem;
-        font-weight: 200;
+        font-weight: 400;
         align-items: center;
         text-justify: auto;
     }
@@ -277,14 +277,35 @@ body {
 }
 .listaze-produc{
     width: 90%;
-    display: grid;
+    margin: auto;
+    height: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
     row-gap: 20px;
     column-gap: 20px;
     justify-content: center;
     align-items: center;
-
+    */
 }
+.card {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    width: 100%;
+}
+@media only screen and (max-width: 768px)  {
+    .listaze-produc {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .card {
     width: 100%;
     margin: auto;
@@ -308,7 +329,7 @@ body {
     object-fit: cover;
 }
 
-.card .name-produt{
+.card .name-produt {
     font-family: var(--font-category);
     font-weight: bold;
     margin-top: 10px;
@@ -562,10 +583,12 @@ body {
 }
 
 .form {
+    margin: 15px;
+    padding: 20px;
     width: 80%;
     display: flex;
     flex-direction: column;
-    gap: 0.50rem;
+    gap: 1rem;
 }
 /* input {
     height: 35px;
@@ -583,7 +606,7 @@ body {
     gap: 1rem;
 }
 .btn-enviar-cadastro {
-    font-weight: 200;
+    font-weight: 400;
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
@@ -597,7 +620,7 @@ body {
 }
 .btn-limpar-cadastro {
     /* font-size: 18px; */
-    font-weight: 200;
+    font-weight: 400;
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
@@ -611,7 +634,7 @@ body {
 }
 .btn-cancelar-cadastro {
     /* font-size: 18px; */
-    font-weight: 200;
+    font-weight: 400;
     height: 40px;
     border-radius: 8px;
     cursor: pointer;
@@ -645,7 +668,8 @@ body {
 /* tela de endereço*/
 .cotainer {
     margin: auto;
-    margin-top: 1rem;
+    padding: 20px;
+    margin-top: 1rem; 
     width: 80%;
     font-size: 1.2rem;
     font-family: var(--fonte-familia);
@@ -660,9 +684,11 @@ body {
 .form {
     /* font-size: 20px; */
     display: flex;
+    margin: 10px;
     flex-direction: column;
     width: 80%;
     height: auto;
+    padding: auto;
    /* align-items: center;*/
     align-content: center;
     justify-items: center;
@@ -677,7 +703,7 @@ body {
     gap: 1rem;
 }
 .btn-endereco-enviar {
-    font-weight: 200;
+    font-weight: 400;
     cursor: pointer;
     width: 50%;
     height: 40px;
@@ -695,7 +721,7 @@ body {
     opacity: 0.6;
 }
 .btn-endereco-limpar {
-    font-weight: 200;
+    font-weight: 400;
     cursor: pointer;
     width: 50%;
     height: 40px;
@@ -847,6 +873,7 @@ body {
     width: 80%;
 }
 .cotainer-form {
+    margin: auto;
     width: 90%;
     display: flex;
     flex-direction: column;
@@ -866,6 +893,7 @@ body {
     width: 80%;
     height: auto;
     display: flex;
+    margin: 10px;
     flex-direction: column;
     justify-content: center;
     align-content: center;
@@ -924,6 +952,7 @@ body {
     justify-content: center;
 }
 .form-papelaria-item {
+    margin: 12px;
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -1156,7 +1185,10 @@ label{
 
 .btn-pagar-conta {
     height: 40px;
-    width: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--cor-principal);
     border: 1px solid var(--cor-principal);
     color: #000;
