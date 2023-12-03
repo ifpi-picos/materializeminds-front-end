@@ -19,7 +19,7 @@ document.getElementById('form-papelaria-item').addEventListener('submit', async 
         supplierId:supllierIdLocalStorage
         }
 
-        console.log(typeof(jsonData.preco))
+        console.log(jsonData.categoria)
 
         var formData = new FormData();
         formData.append('file', arquivo);
@@ -34,7 +34,7 @@ document.getElementById('form-papelaria-item').addEventListener('submit', async 
 
 async function requestCreateProduct(formData){
     
-    const url = 'http://localhost:3333/supllier/product/add'
+    const url = 'https://api-materialize.onrender.com/supllier/product/add'
 
     try {
         const response = await fetch(url, {

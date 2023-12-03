@@ -16,7 +16,7 @@ document.getElementById('formLoginSupllier').addEventListener('submit', async (e
 
 
 async function requestLoginSupllier(supllierData){
-	const url = 'http://localhost:3333/supllier/login';
+	const url = 'https://api-materialize.onrender.com/supllier/login';
   console.log(supllierData)
 
   try {
@@ -31,13 +31,13 @@ async function requestLoginSupllier(supllierData){
     const data = await response.json();
 
     if (response.status === 201) {
-      console.log('ss')
       localStorage.clear();
       const supllierDataString = JSON.stringify(data);
       localStorage.setItem('supllierData', supllierDataString);
       window.location.href = '/homeFornecedor.html'
 
     } else if(response.status === 400) {
+      alert(data.error)
       console.log(data.error);
     }
 
