@@ -493,10 +493,12 @@ body {
 }
 .btns-de-categoria {
     width: 100%;
-    height: 120px;
+    margin: 10px;
+    height: auto;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     justify-content: center;
+    align-items: center;
     align-items: flex-start;
     gap: 1rem;
 }
@@ -549,6 +551,8 @@ body {
     }
     .btns-de-categoria {
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
     .btn-adicionar-ao-carrinho {
         width: 100%;

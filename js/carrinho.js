@@ -24,6 +24,20 @@ function atualizarCarrinho() {
     totalElement.textContent = total.toFixed(2);
 
 }
+function aumentarQuantidade(id) {
+    const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    const produto = carrinho.find(item => item.id === id);
+    if (produto) {
+        produto.quantidade += 1;
+    }
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+}
+function excluirDoCarrinho(id) {
+    let carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];
+    carrinho = carrinho.filter(item => item.id !== id);
+    localStorage.setItem('carrinho', JSON.stringify(carrinho));
+
+}
 function IrparaPaginaPagsamento() {
     window.location.href = 'pagamento.html';
     alert('Ir para a página de pagamento!');
