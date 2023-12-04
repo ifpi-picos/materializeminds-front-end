@@ -42,12 +42,15 @@ async function requestCreateProduct(formData){
             body : formData
         });
 
+        const data = response.json
+
         if (response.status === 201) {
             alert("Produto criado com sucesso!");
             console.log('produto criado com sucesso!');
         
         } else if (response.status === 400) {
-            console.error('Requisição inválida.');
+            console.error(error);
+            alert(data.error)
         
         } else {
             console.error('Erro desconhecido.');
