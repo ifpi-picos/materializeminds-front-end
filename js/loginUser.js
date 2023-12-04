@@ -38,6 +38,7 @@ async function requestLogin(userDate){
 
     } else if(response.status === 400) {
       console.log(data.error);
+      alert(data.error)
     }
 
   } catch (error) {
