@@ -22,7 +22,7 @@ function atualizarCarrinho() {
     });
 
     totalElement.textContent = total.toFixed(2);
-
+    
 }
 function aumentarQuantidade(id) {
     const carrinho = JSON.parse(localStorage.getItem('carrinho')) || [];

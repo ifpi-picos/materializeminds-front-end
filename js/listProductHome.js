@@ -45,8 +45,10 @@ function criarCards(data) {
 
     const linkCompra = document.createElement('a');
     linkCompra.className = 'buttonS';
-    linkCompra.href = item.link; 
+    // linkCompra.href = item.link; 
     linkCompra.textContent = 'Compra';
+
+    linkCompra.onclick = addCartItemCart;
 
     cardDiv.appendChild(imagem);
     cardDiv.appendChild(nomeProduto);
