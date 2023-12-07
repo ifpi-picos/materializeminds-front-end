@@ -1,10 +1,9 @@
 function getCartLocalStorage(){
 
-  const jsonUserDate = localStorage.getItem('userData')
-  const userdate = JSON.parse(jsonUserDate)
+  const jsonCartUserDate = localStorage.getItem('cartUserData')
+  const cart = JSON.parse(jsonCartUserDate)
+  console.log(cart)
 
-  const cart = userdate.cart
-  
   criarCardsCartItem(cart)
   
 }
@@ -17,10 +16,9 @@ function criarCardsCartItem(data) {
   container.innerHTML = '';
 
   data.cartItems.forEach(item => {
-    console.log(item)
     const cardDiv = document.createElement('div');
     cardDiv.className = 'card';
-    console.log(item.product.imageUrl)
+
     const imagem = document.createElement('img');
     imagem.src = item.product.imageUrl; 
     imagem.alt = '';
