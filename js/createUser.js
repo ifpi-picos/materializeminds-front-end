@@ -33,7 +33,7 @@ async function fazerRequisicao(user) {
 
     if (response.status === 200) {
       alert("usuario criado com sucesso");
-      window.location.href = 'home.html';
+      window.location.href = 'loginUser.html';
 
     } else if(response.status === 400) {
       alert(data.message);;

@@ -3,7 +3,7 @@ async function requestCreateCartItem(userDate){
 	
 	const url = 'https://api-materialize.onrender.com/add/cartItem/cart';
 	// const url = 'http://localhost:3333/add/cartItem/cart';
-
+  console.log('ss')
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -14,6 +14,7 @@ async function requestCreateCartItem(userDate){
     });
     
     const data = await response.json();
+    
     console.log(data)
 
     if (response.status === 201) {
@@ -69,8 +70,6 @@ function addCartItemCart(){
 		card.addEventListener('click', async function() {
       const dataProduct = await getRequestProduct()
       const product = dataProduct[index]
-
-      console.log()
 
       const userDate = {
 				quantity: 1,
