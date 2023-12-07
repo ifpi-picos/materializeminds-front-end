@@ -6,7 +6,7 @@ function getCartLocalStorage(){
   const cart = userdate.cart
   
   criarCardsCartItem(cart)
-  // addPriceTotal()
+  
 }
 
 

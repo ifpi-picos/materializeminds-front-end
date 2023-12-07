@@ -19,7 +19,6 @@ async function requestLogin(userDate){
 	// const url = 'https://api-materialize.onrender.com/login';
 	const url = 'http://localhost:3333/login';
 
-  console.log(userDate)
 
   try {
     const response = await fetch(url, {
@@ -34,8 +33,13 @@ async function requestLogin(userDate){
 
     if (response.status === 200) {
       localStorage.clear();
-      const userDataString = JSON.stringify(data);
+
+      const userDataString = JSON.stringify(data.token);
+      const cartUserString = JSON.stringify(data.cart);
+
       localStorage.setItem('userData', userDataString);
+      localStorage.setItem('cartUserData', cartUserString);
+      
       window.location.href = '/home.html'
 
     } else if(response.status === 400) {

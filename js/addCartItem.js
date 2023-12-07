@@ -2,7 +2,8 @@
 async function requestCreateCartItem(userDate){
 	
 	const url = 'https://api-materialize.onrender.com/add/cartItem/cart';
-  
+	// const url = 'http://localhost:3333/add/cartItem/cart';
+
   try {
     const response = await fetch(url, {
       method: 'POST',
@@ -11,17 +12,23 @@ async function requestCreateCartItem(userDate){
       },
       body: JSON.stringify(userDate),
     });
-
+    
     const data = await response.json();
+    
+    if (response.status === 201) {
+      
+      localStorage.removeItem('cartUserData');
+      
+      const cartUserString = JSON.stringify(data);
+      localStorage.setItem('cartUserData', cartUserString);;
 
-    if (response.status === 200) {
-     
-      alert(data.mensage)
+      alert('Produto adicionado ao carrinho')
 
     } else if(response.status === 400) {
       console.log(data.error);
       alert(data.error)
     }
+
   } catch (error) {
     console.error
   }
@@ -42,7 +49,7 @@ async function getRequestProduct() {
 		if (response.status == 200) {
       
 			const dataProduct = await response.json();
-      console.log(dataProduct)
+      return dataProduct  
 		} else {
 			console.error('Erro na requisição:', response.status);
 		}
@@ -53,28 +60,26 @@ async function getRequestProduct() {
 
 function addCartItemCart(){
   var cards = document.querySelectorAll('.card');
-  const dataUserJson = localStorage.getItem('userData')
-	const dataUser = JSON.parse(dataUserJson)
+  const cartUserJson = localStorage.getItem('cartUserData')
+	const cartUser = JSON.parse(cartUserJson)
 
   cards.forEach(function(card, index) {
     
 		card.addEventListener('click', async function() {
       const dataProduct = await getRequestProduct()
-
       const product = dataProduct[index]
-      
-			alert('Você clicou no produto')
-			const userDate = {
+
+      console.log()
+
+      const userDate = {
 				quantity: 1,
-				cartId: dataUser.cart.id,
+				cartId: cartUser.id,
 				productId: product.id,
 			}
 
       requestCreateCartItem(userDate)
-
     });  
   });
-
 }
 
 
