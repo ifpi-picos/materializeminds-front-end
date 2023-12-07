@@ -1,9 +1,9 @@
 async function getRequestProduct() {
 
 	const params = new URLSearchParams(window.location.search);
-	const produto = params.get("categoria");
+	const category = params.get("categoria");
 
-  const url =`https://api-materialize.onrender.com/products/filter/${produto}`
+  const url =`https://api-materialize.onrender.com/products/filter/${category}`
   
 	try {
 		const response = await fetch(url, {
@@ -14,9 +14,11 @@ async function getRequestProduct() {
 		});    
 	
 		if (response.status == 200) {
-      
+      const title = document.getElementById('title');
+      title.innerHTML = category
 			const dataProduct = await response.json();
       criarCards(dataProduct)
+      
 		} else {
 			console.error('Erro na requisição:', response.status);
 		}
@@ -27,33 +29,52 @@ async function getRequestProduct() {
 
 
 function criarCards(data) {
-	console.log(data)
-	const container = document.getElementById('product-list');
+  
+  const container = document.getElementById('product-list');  
   container.innerHTML = '';
 
-  let htmlString = '';
-
   data.forEach(item => {
-    htmlString += `
-      <li class="product-item" id="produto1">
-        <div class="img-lapis">
-          <img src="${item.imageUrl}" alt="" class="product-image">
-        </div>
-        <div class="description-lapis">
-          <div class="product-description">
-            <h2>${item.nome}</h2>
-            <p>${item.descricao}</p>
-          </div>
-          <div class="product-price">${item.preco}</div>
-          <div class="btns-de-categoria">
-            <button class="btn-adicionar-ao-carrinho" onclick="adicionarAoCarrinho('${item.nome}', ${item.preco})">Adicionar ao carrinho</button>
-            <button class="btn-comprar-agora">Comprar agora</button>
-          </div>
-        </div>
-      </li>`;
-  });
 
-  container.innerHTML = htmlString;
+    const cardDiv = document.createElement('div');
+    cardDiv.className = 'card';
+
+    const imagem = document.createElement('img');
+    imagem.src = item.imageUrl; 
+    imagem.alt = '';
+
+    const nomeProduto = document.createElement('p');
+    nomeProduto.className = 'name-produt';
+    nomeProduto.textContent = item.nomeDoProduto; 
+
+    const preco = document.createElement('span');
+    preco.className = 'price';
+		const oldPrice = item.preco + 20;
+    preco.innerHTML = `R$ ${item.preco} <del>R$ ${oldPrice}</del>`; 
+
+    const buttonCardDiv = document.createElement('div');
+    buttonCardDiv.className = 'button-card';
+
+    const linkCompra = document.createElement('a');
+    linkCompra.className = 'buttonS';
+    linkCompra.id = 'color'
+    // linkCompra.href = item.link; 
+    linkCompra.textContent = 'Compra';
+
+    const addToCartButton = document.createElement('a');
+    addToCartButton.className = 'buttonS';
+    addToCartButton.textContent = 'Adicionar ao Carrinho';
+    // addToCartButton.onclick = addCartItemCart;
+
+    buttonCardDiv.appendChild(linkCompra);
+    buttonCardDiv.appendChild(addToCartButton);
+
+    cardDiv.appendChild(imagem);
+    cardDiv.appendChild(nomeProduto);
+    cardDiv.appendChild(preco);
+    cardDiv.appendChild(buttonCardDiv);
+
+    container.appendChild(cardDiv);
+  });
 }
 
 getRequestProduct()
