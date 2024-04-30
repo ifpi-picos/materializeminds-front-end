@@ -74,6 +74,7 @@ body {
 .logo img {
     max-width: 100%;
     height: auto;
+    border-radius: 50px;
 }
 .btns {
     width: 100%;
@@ -101,7 +102,8 @@ body {
 }
 .btn-cadastrar {
     border: 1px solid var(--cor-principal);;
-    color: #000
+    color: #000;
+    background-color: var(--cor-branca);
 }
 .sec {
     width: 100%;
